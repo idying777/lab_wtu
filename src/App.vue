@@ -1,31 +1,40 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+      <el-menu-item index="1">
+        <router-link to="/">首页</router-link>
+      </el-menu-item>
+      <el-menu-item index="2">
+        <router-link to="/">机构职能</router-link>
+      </el-menu-item>
+      <el-menu-item index="3">
+        <router-link to="/">研究团队</router-link>
+      </el-menu-item>
+      <el-menu-item index="4">
+        <router-link to="/">科研成果</router-link>
+      </el-menu-item>
+      <el-menu-item index="5">
+        <a href="https://www.wtu.edu.cn">学校首页</a>
+      </el-menu-item>
+    </el-menu>
     <router-view/>
   </div>
 </template>
 
+<script>
+  export default {
+    name: 'app',
+    components: {},
+  }
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 </style>
