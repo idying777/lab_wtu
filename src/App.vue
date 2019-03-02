@@ -1,10 +1,10 @@
 <template>
-  <el-container id="app">
-    <el-col :span="16" :push="4">
+  <el-row id="app" type="flex" justify="center">
+    <el-col :xs="24" :sm="22" :md="20" :lg="18" :xl="16">
       <el-header>
         <el-menu default-active="1" mode="horizontal" :router="true">
           <el-menu-item index="/home">首页</el-menu-item>
-          <el-menu-item index="/category/function">机构职能</el-menu-item>
+          <el-menu-item index="/function">机构职能</el-menu-item>
           <el-menu-item index="/category/team">研究团队</el-menu-item>
           <el-menu-item index="/category/result">科研成果</el-menu-item>
           <el-menu-item index="/category/instrument">仪器设备</el-menu-item>
@@ -19,7 +19,7 @@
         footer
       </el-footer>
     </el-col>
-  </el-container>
+  </el-row>
 </template>
 
 <script>
@@ -30,13 +30,5 @@
 </script>
 
 <style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
-
 
 </style>

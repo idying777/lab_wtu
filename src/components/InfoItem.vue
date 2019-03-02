@@ -4,17 +4,17 @@
 
     <div v-else style="width: 100%">
       <el-row>{{category_info[category]}}</el-row>
-      <el-row v-bind:key="post.title" v-for="post of  items._embedded.posts">
-        <el-col :span="12">{{post.title}}</el-col>
-        <el-col :span="10">{{post.createdAt.slice(0,10)}}</el-col>
-      </el-row>
+      <items v-bind:items="items._embedded.posts"></items>
     </div>
   </section>
 </template>
 
 <script>
+  import Items from './Items'
+
   export default {
     name: 'Info',
+    components: {Items},
     props: ['category'],
     data() {
       return {
