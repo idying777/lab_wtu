@@ -16,7 +16,7 @@ export default new Router({
       redirect: '/',
     },
     {
-      path: '/function',
+      path: '/category/:category',
       name: 'tab',
       component: () => import('./components/Tab'),
     },

@@ -15,9 +15,7 @@
 <script>
   export default {
     name: 'Info',
-    props: {
-      category: '',
-    },
+    props: ['category'],
     data() {
       return {
         category_info: {

@@ -1,6 +1,6 @@
 <template>
-  <el-main class="home">
-    <el-row :span="16" :gutter="10" type="flex" justify="center">
+  <div class="home">
+    <el-row>
       <el-col :span="6">
         about
       </el-col>
@@ -11,7 +11,7 @@
         <info-item category="notify"/>
       </el-col>
     </el-row>
-    <el-row :span="16" :gutter="10" type="flex" justify="center">
+    <el-row :gutter="10">
       <el-col :span="6">
         <info-item category="instrument"/>
       </el-col>
@@ -22,7 +22,7 @@
         <info-item category="exchange"/>
       </el-col>
     </el-row>
-  </el-main>
+  </div>
 </template>
 
 <script>
