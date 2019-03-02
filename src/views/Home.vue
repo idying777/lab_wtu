@@ -1,14 +1,13 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
     <el-row :span="16" :gutter="10" type="flex" justify="center">
       <el-col :span="6">
         <info-item/>
       </el-col>
-      <el-col :span="4">
+      <el-col :span="5">
         <info-item/>
       </el-col>
-      <el-col :span="4">
+      <el-col :span="5">
         <info-item/>
       </el-col>
     </el-row>
@@ -16,10 +15,10 @@
       <el-col :span="6">
         <info-item/>
       </el-col>
-      <el-col :span="4">
+      <el-col :span="5">
         <info-item/>
       </el-col>
-      <el-col :span="4">
+      <el-col :span="5">
         <info-item/>
       </el-col>
     </el-row>
