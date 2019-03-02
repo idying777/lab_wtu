@@ -2,24 +2,24 @@
   <el-main class="home">
     <el-row :span="16" :gutter="10" type="flex" justify="center">
       <el-col :span="6">
-        <info-item category="about we"/>
+        about
       </el-col>
       <el-col :span="5">
-        <info-item category="新闻"/>
+        <info-item category="news"/>
       </el-col>
       <el-col :span="5">
-        <info-item category="公告"/>
+        <info-item category="notify"/>
       </el-col>
     </el-row>
     <el-row :span="16" :gutter="10" type="flex" justify="center">
       <el-col :span="6">
-        <info-item category="公告"/>
+        <info-item category="instrument"/>
       </el-col>
       <el-col :span="5">
-        <info-item category="公告"/>
+        <info-item category="result"/>
       </el-col>
       <el-col :span="5">
-        <info-item category="公告"/>
+        <info-item category="exchange"/>
       </el-col>
     </el-row>
   </el-main>

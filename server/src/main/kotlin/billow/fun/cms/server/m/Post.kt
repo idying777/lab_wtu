@@ -2,15 +2,17 @@ package billow.`fun`.cms.server.m
 
 import billow.`fun`.cms.server.BaseEntity
 import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.data.repository.query.Param
 import javax.persistence.Entity
-import javax.persistence.ManyToMany
 
 @Entity
 data class Post(
         val title: String,
         val content: String,
-        @ManyToMany val categories: MutableCollection<Category>
+        val category: String
 ) : BaseEntity()
 
 
-interface PostRepo : JpaRepository<Post, Long>
+interface PostRepo : JpaRepository<Post, Long> {
+    fun findByCategory(@Param("category") category: String): Collection<Post>
+}

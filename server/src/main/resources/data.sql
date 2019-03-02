@@ -1,22 +1,17 @@
-insert into cms.category (id, created_at, last_modified_at, me)
-values (1, '1900-1-1', '1900-1-1', '热点新闻'),
-       (2, '1900-1-1', '1900-1-1', '通知公告'),
-       (3, '1900-1-1', '1900-1-1', '仪器设备'),
-       (4, '1900-1-1', '1900-1-1', '科研成果'),
-       (5, '1900-1-1', '1900-1-1', '开发交流');
-
-insert into cms.post (id, created_at, last_modified_at, content, title)
-values (1, '1900-1-1', '1900-1-1', 'hello', 'news'),
-       (2, '1900-1-1', '1900-1-1', 'hello', 'notify'),
-       (3, '1900-1-1', '1900-1-1', 'hello', 'instrument');
-
-
-INSERT INTO cms.category_posts (category_id, posts_id)
-VALUES (1, 1),
-       (2, 2),
-       (3, 3);
-
-INSERT INTO cms.post_categories (post_id, categories_id)
-VALUES (1, 1),
-       (2, 2),
-       (3, 3);
+insert into cms.post (id, created_at, last_modified_at, content, title, category
+)
+values (1, '1900-1-1', '1900-1-1', 'hello', 'a news', 'news'),
+       (11, '1900-1-1', '1900-1-1', 'hello', 'a news', 'news'),
+       (12, '1900-1-1', '1900-1-1', 'hello', 'a news', 'news'),
+       (13, '1900-1-1', '1900-1-1', 'hello', 'a news', 'news'),
+       (14, '1900-1-1', '1900-1-1', 'hello', 'a news', 'news'),
+       (15, '1900-1-1', '1900-1-1', 'hello', 'a news', 'news'),
+       (16, '1900-1-1', '1900-1-1', 'hello', 'a news', 'news'),
+       (17, '1900-1-1', '1900-1-1', 'hello', 'a news', 'news'),
+       (18, '1900-1-1', '1900-1-1', 'hello', 'a news', 'news'),
+       (19, '1900-1-1', '1900-1-1', 'hello', 'a news', 'news'),
+       (110, '1900-1-1', '1900-1-1', 'hello', 'a news', 'news'),
+       (2, '1900-1-1', '1900-1-1', 'hello', 'a notify', 'notify'),
+       (3, '1900-1-1', '1900-1-1', 'hello', 'a instrument', 'instrument'),
+       (4, '1900-1-1', '1900-1-1', 'hello', 'a exchange', 'exchange'),
+       (5, '1900-1-1', '1900-1-1', 'hello', 'a result', 'result');

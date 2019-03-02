@@ -12,7 +12,7 @@ import java.util.Date;
 @MappedSuperclass
 public class BaseEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "1000")
     Long id;
     @CreatedDate
     private
