@@ -1,5 +1,10 @@
 <template>
   <div class="home">
+    <div>
+      <ul>
+        <img class="bk" src="../assets/banner.png"></img>
+      </ul>
+    </div>
     <el-row :span="16" :gutter="10" type="flex" justify="center">
       <el-col :span="6">
         <info-item/>
