@@ -1,12 +1,20 @@
 <template>
   <section>
-    item
+    {{category}}
   </section>
 </template>
 
 <script>
   export default {
     name: 'Info',
+    props: {
+      category: '',
+    },
+    data() {
+      return {
+        items: [],
+      }
+    },
   }
 </script>
 

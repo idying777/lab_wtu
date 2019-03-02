@@ -12,7 +12,11 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/jgzn',
+      path: '/home',
+      redirect: '/',
+    },
+    {
+      path: '/function',
       name: 'tab',
       component: () => import('./components/Tab'),
     },
