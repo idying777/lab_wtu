@@ -1,7 +1,7 @@
 <template>
-  <el-row id="app" type="flex" justify="center">
-    <el-col :xs="24" :sm="22" :md="20" :lg="18" :xl="16">
-      <el-header>
+  <el-row type="flex" justify="center">
+    <el-col :xs="24" :md="20" :xl="16">
+      <el-header style="height: auto">
         <nav-main></nav-main>
       </el-header>
       <el-main>
