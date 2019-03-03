@@ -1,0 +1,16 @@
+POST http://localhost:8081/api/posts
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+"title":"d",
+"content":"d",
+"category":"news"
+}
+
+###
+
+GET http://localhost:8081/api/posts
+Cache-Control: no-cache
+Content-Type: application/json
+

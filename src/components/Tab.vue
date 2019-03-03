@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1 v-if="loading">loading</h1>
-    <items v-else v-bind:items="items._embedded.posts"/>
+    <items v-bind:items="posts"/>
   </div>
 </template>
 
@@ -12,25 +11,24 @@
     name: 'Tab',
     data() {
       return {
-        items: [],
-        loading: true,
+        posts: [],
       }
     },
+    computed: {
+      category() {
+        return this.$route.params.category
+      },
+    },
     created() {
-      this.fetchData()
+      this.routeUpdate()
     },
     methods: {
-      fetchData() {
-        this.loading = true
-        this.$api.get('http://localhost:8081/api/posts/search/findByCategory?category=' + this.$route.params.category).
-          then(value => {
-            this.items = value.data
-            this.loading = false
-          })
+      routeUpdate() {
+        this.posts = this.$store.getters.getPostsByCategory(this.category)
       },
     },
     watch: {
-      '$route': 'fetchData',
+      '$route': 'routeUpdate',
     },
     components: {
       Items,

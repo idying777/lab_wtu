@@ -1,10 +1,8 @@
 <template>
   <section>
-    <h1 v-if="loading">Loading</h1>
-
-    <div v-else style="width: 100%">
+    <div style="width: 100%">
       <el-row>{{category_info[category]}}</el-row>
-      <items v-bind:items="items._embedded.posts"></items>
+      <items v-bind:items="posts"></items>
     </div>
   </section>
 </template>
@@ -25,15 +23,12 @@
           'result': '科研成果',
           'exchange': '开发交流',
         },
-        items: [],
-        loading: true,
       }
     },
-    async mounted() {
-      this.$api.get('http://localhost:8081/api/posts/search/findByCategory?category=' + this.category).then(value => {
-        this.items = value.data
-        this.loading = false
-      })
+    computed: {
+      posts() {
+        return this.$store.getters.getPostsByCategory(this.category)
+      },
     },
   }
 </script>

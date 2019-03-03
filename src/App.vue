@@ -23,9 +23,14 @@
 </template>
 
 <script>
+  import { FETCH_DATA } from './store-types'
+
   export default {
     name: 'app',
     components: {},
+    async created() {
+      await this.$store.dispatch(FETCH_DATA)
+    },
   }
 </script>
 
