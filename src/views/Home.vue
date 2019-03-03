@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <div>
+      <img class="bk" src="../assets/banner.png" alt="background"/>
+    </div>
     <el-row :gutter="10">
       <el-col :lg="6" :md="8" :sm="12">
         about
