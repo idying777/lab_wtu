@@ -5,31 +5,31 @@
         about
       </el-col>
       <el-col :span="5">
-        <info-item category="news"/>
+        <items-card category="news"/>
       </el-col>
       <el-col :span="5">
-        <info-item category="notify"/>
+        <items-card category="notify"/>
       </el-col>
     </el-row>
     <el-row :gutter="10">
       <el-col :span="6">
-        <info-item category="instrument"/>
+        <items-card category="instrument"/>
       </el-col>
       <el-col :span="5">
-        <info-item category="result"/>
+        <items-card category="result"/>
       </el-col>
       <el-col :span="5">
-        <info-item category="exchange"/>
+        <items-card category="exchange"/>
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-  import InfoItem from '../components/InfoItem'
+  import ItemsCard from '../components/ItemsCard'
 
   export default {
     name: 'home',
-    components: {InfoItem},
+    components: {ItemsCard},
   }
 </script>

@@ -1,17 +1,17 @@
 <template>
-  <section>
-    <div style="width: 100%">
-      <el-row>{{category_info[category]}}</el-row>
-      <items v-bind:items="posts"></items>
+  <el-card class="box">
+    <div slot="header">
+      <span>{{category_info[category]}}</span>
     </div>
-  </section>
+    <items v-bind:items="posts"></items>
+  </el-card>
 </template>
 
 <script>
   import Items from './Items'
 
   export default {
-    name: 'Info',
+    name: 'ItemsCard',
     components: {Items},
     props: ['category'],
     data() {
@@ -34,7 +34,7 @@
 </script>
 
 <style scoped>
-  section {
+  .box {
     height: 300px;
   }
 </style>
