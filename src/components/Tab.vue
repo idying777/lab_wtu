@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <el-card>
     <items v-bind:items="posts"/>
-  </div>
+  </el-card>
 </template>
 
 <script>
