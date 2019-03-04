@@ -4,32 +4,26 @@
       <img class="bk" src="../assets/banner.png" alt="background"/>
     </div>
     <div>
-      <main>
-        <el-row :gutter="10">
-          <el-col :md="8" :sm="12">
-            about
-          </el-col>
-          <el-col :md="8" :sm="12">
-            <items-card category="news"/>
-          </el-col>
-          <el-col :md="8" :sm="12">
-            <items-card category="notify"/>
-          </el-col>
-          <el-col :md="8" :sm="12">
-            <items-card category="instrument"/>
-          </el-col>
-          <el-col :md="8" :sm="12">
-            <items-card category="result"/>
-          </el-col>
-          <el-col :md="8" :sm="12">
-            <items-card category="exchange"/>
-          </el-col>
-        </el-row>
-        <el-container></el-container>
-      </main>
-      <aside>
-        aside
-      </aside>
+      <el-row :gutter="10">
+        <el-col :md="8" :sm="12">
+          about
+        </el-col>
+        <el-col :md="8" :sm="12">
+          <items-card category="news"/>
+        </el-col>
+        <el-col :md="8" :sm="12">
+          <items-card category="notify"/>
+        </el-col>
+        <el-col :md="8" :sm="12">
+          <items-card category="instrument"/>
+        </el-col>
+        <el-col :md="8" :sm="12">
+          <items-card category="result"/>
+        </el-col>
+        <el-col :md="8" :sm="12">
+          <items-card category="exchange"/>
+        </el-col>
+      </el-row>
     </div>
   </div>
 </template>
