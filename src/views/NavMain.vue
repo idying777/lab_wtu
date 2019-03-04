@@ -20,5 +20,8 @@
 </script>
 
 <style scoped>
-
+  a {
+    display: block;
+    text-decoration: none;
+  }
 </style>
