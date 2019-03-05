@@ -173,7 +173,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,6 +184,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -386,6 +386,7 @@
       <workItem from="1551662978878" duration="17000" />
       <workItem from="1551663046455" duration="6982000" />
       <workItem from="1551681308119" duration="2683000" />
+      <workItem from="1551763682432" duration="704000" />
     </task>
     <task id="LOCAL-00001" summary="add ele">
       <created>1551459629784</created>
@@ -503,12 +504,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58268000" />
+    <option name="totallyTimeSpent" value="58972000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22654584" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22867803" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -523,9 +524,9 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3275488" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32719395" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
       <window_info anchor="bottom" id="Build" order="13" weight="0.329718" />
       <window_info anchor="bottom" id="REST Client" order="14" weight="0.329718" />
@@ -615,7 +616,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="layout.." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://a6d73ddd-a027-4268-9e6f-6be2a9f87649/schema/cms/table/hibernate_sequence" />
     <entry file="das://a6d73ddd-a027-4268-9e6f-6be2a9f87649/schema/cms/table/post_categories" />
     <entry file="file://$PROJECT_DIR$/server/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -930,6 +930,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/kotlinc.xml">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="369">
+            <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
