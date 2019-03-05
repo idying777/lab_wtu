@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@toast-ui/vue-editor": "^1.0.4",
     "axios": "^0.18.0",
     "element-ui": "^2.4.5",
     "vue": "^2.6.6",

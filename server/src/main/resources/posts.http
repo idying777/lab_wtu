@@ -3,9 +3,9 @@ Cache-Control: no-cache
 Content-Type: application/json
 
 {
-"title":"d",
-"content":"d",
-"category":"news"
+  "title": "d",
+  "content": "d",
+  "category": "news"
 }
 
 ###
@@ -14,3 +14,14 @@ GET http://localhost:8081/api/posts
 Cache-Control: no-cache
 Content-Type: application/json
 
+###
+
+POST http://localhost:8081/api/admin/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+###

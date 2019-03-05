@@ -1,0 +1,174 @@
+POST http://localhost:8081/api/admin/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-05T055758.200.txt
+
+###
+
+POST http://localhost:8081/api/admin/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-05T055334.200.txt
+
+###
+
+POST http://localhost:8081/api/admin/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-05T055310.200.txt
+
+###
+
+POST http://localhost:8081/api/admin/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-05T055133.200.txt
+
+###
+
+POST http://localhost:8081/api/admin/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-05T054245.200.txt
+
+###
+
+POST http://localhost:8081/api/admin/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-05T054217.200.txt
+
+###
+
+POST http://localhost:8081/api/admin/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-05T054206.200.txt
+
+###
+
+POST http://localhost:8081/api/admin/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-05T053912.200.txt
+
+###
+
+POST http://localhost:8081/admin/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-05T053544.500.json
+
+###
+
+POST http://localhost:8081/api/admin/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-05T053530.404.json
+
+###
+
+POST http://localhost:8081/api/posts
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+"title":"d",
+"content":"d",
+"category":"news"
+}
+
+###
+
+POST http://localhost:8081/api/posts
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+"title":"d",
+"content":"d",
+"category":"news"
+}
+
+###
+
+POST http://localhost:8081/api/posts
+Accept: */*
+Cache-Control: no-cache
+
+{
+'title':'d',
+'content':'d',
+'category':'news'
+}
+
+<> 2019-03-02T115123.400.json
+
+###
+
+GET http://localhost:8081/api/posts
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-02T114953.200.json
+
+###
+
+GET http://localhost:8080/api/posts
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-02T114945.200.html
+
+###
+

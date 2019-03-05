@@ -1,4 +1,4 @@
-package billow.`fun`.cms.server.m
+package billow.`fun`.cms.server.model
 
 import billow.`fun`.cms.server.BaseEntity
 import org.springframework.data.jpa.repository.JpaRepository

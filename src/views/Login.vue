@@ -1,57 +1,58 @@
 <template>
-  <el-form :model="form" :rules="rules" ref="form" label-position="left" label-width="0"
-           class="login-container">
-    <h3 class="title">系统登录</h3>
-    <el-form-item prop="account">
-      <el-input type="text" v-model="form.username" auto-complete="off" placeholder="账号"></el-input>
-    </el-form-item>
-    <el-form-item prop="checkPass">
-      <el-input type="password" v-model="form.password" auto-complete="off" placeholder="密码"></el-input>
-    </el-form-item>
-    <el-checkbox v-model="checked" checked class="remember">记住密码</el-checkbox>
-    <el-form-item style="width:100%;">
-      <el-button type="primary" style="width:100%;" @click.native.prevent="submit" :loading="logged_in">登录
-      </el-button>
-    </el-form-item>
-  </el-form>
+  <main>
+    <el-form :model="form" :rules="rules" ref="form" label-position="left" label-width="0"
+             class="login-container">
+      <h3 class="title">系统登录</h3>
+      <el-form-item>
+        <el-input type="text" v-model="form.username" auto-complete="on" placeholder="账号"></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-input type="password" v-model="form.password" auto-complete="off" placeholder="密码"></el-input>
+      </el-form-item>
+      <el-checkbox v-model="remember" class="remember">记住密码</el-checkbox>
+      <el-form-item style="width:100%;">
+        <el-button type="primary" style="width:100%;" v-on:click="submit" :loading="logged_in">登录
+        </el-button>
+      </el-form-item>
+    </el-form>
+  </main>
 </template>
 
 <script>
+  import { LOGIN } from '../store-types'
+
   export default {
     data() {
       return {
         logged_in: false,
+        remember: false,
         form: {
           username: 'admin',
-          password: 'admin',
+          password: ''
         },
         rules: {
           username: [
-            {required: true, message: '请输入账号', trigger: 'blur'},
+            {required: true, message: '请输入账号', trigger: 'blur'}
           ],
           password: [
-            {required: true, message: '请输入密码', trigger: 'blur'},
-          ],
-        },
-        checked: true,
+            {required: true, message: '请输入密码', trigger: 'blur'}
+          ]
+        }
       }
     },
     methods: {
       submit() {
-        this.$refs.form.validate(valid => {
-          if (valid) {
-            this.logged_in = true
-            localStorage.setItem('username', this.form.username)
-            this.logged_in = false
-            this.$router.push('/admin')
-            return true
-          } else {
-            console.log('error submit!!')
-            return false
-          }
+        this.logged_in = true
+        this.$store.dispatch(LOGIN, this.form).then(() => {
+          this.logged_in = false
+          this.$router.push('/admin')
+        }).catch(() => {
+          this.logged_in = false
+          this.$message('Password Error')
         })
-      },
-    },
+      }
+
+    }
   }
 </script>
 <style lang="scss" scoped>
