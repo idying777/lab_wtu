@@ -57,7 +57,7 @@
         </table><!--#endeditable-->
       </DIV>
     </div>
-    <div class="botcont">联系我们:027-59367574 地址:武汉市江夏区阳光一号 邮编：430200<br/>Copyright©版权所有：纺织纤维及制品教育部重点实验室</div>
+    <div class="botcont">联系我们:027-59367574 地址:武汉市江夏区阳光一号 邮编：430200<br/>Copyright©版权所有：数计重点实验室</div>
   </div>
 </template>
 
@@ -67,7 +67,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
   #footer {
     width: 100%;
@@ -76,6 +76,10 @@
     margin: 0 auto;
     padding: 10px 0;
     font-size: 12px;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .lkplist {
@@ -87,10 +91,15 @@
 
   .lktitle {
     width: 100%;
-    height: 37px;
-    line-height: 37px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0;
     display: block;
     overflow: hidden;
+
+    h3 {
+      margin: 0;
+    }
   }
 
   .lkcont {

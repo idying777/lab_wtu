@@ -9,9 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "axios-mock-adapter": "^1.16.0",
     "element-ui": "^2.4.5",
-    "mockjs": "^1.0.1-beta3",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
