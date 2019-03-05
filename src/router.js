@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Login from './views/Login.vue'
+import Admin from './views/Admin'
 
 Vue.use(Router)
 
@@ -18,7 +19,7 @@ export default new Router({
     },
     {
       path: '/admin',
-      component: Login,
+      component: Admin,
       name: 'admin',
     },
     {
