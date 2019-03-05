@@ -1,5 +1,5 @@
 <template>
-  <el-row  type="flex" justify="center">
+  <el-row type="flex" justify="center">
     <el-col :xs="24" :md="20" :xl="16">
       <el-header v-if="flag" class="height_auto">
         <nav-main></nav-main>
@@ -21,9 +21,9 @@
   import FooterMain from './views/FooterMain'
 
   export default {
-    data(){
-      return{
-        flag:true
+    data() {
+      return {
+        flag: true,
       }
     },
     name: 'app',
@@ -40,11 +40,8 @@
     },
     methods: {
       routeUpdate() {
-        this.flag=!this.$route.path.startsWith("/login")
-
-      }
-
-
+        this.flag = !this.$route.path.startsWith('/admin')
+      },
     },
   }
 </script>

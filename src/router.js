@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Login from './views/Login.vue'
 
-
 Vue.use(Router)
 
 export default new Router({
@@ -14,14 +13,18 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/login',
-      component: Login,
-      name: '',
-      hidden: true
-    },
-    {
       path: '/home',
       redirect: '/',
+    },
+    {
+      path: '/admin',
+      component: Login,
+      name: 'admin',
+    },
+    {
+      path: '/admin/login',
+      component: Login,
+      name: 'login',
     },
     {
       path: '/category/:category',
