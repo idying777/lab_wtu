@@ -23,26 +23,26 @@
   export default {
     data() {
       return {
-        flag: true,
+        flag: true
       }
     },
     name: 'app',
     components: {
       NavMain,
-      FooterMain,
+      FooterMain
     },
     async created() {
       this.routeUpdate()
       await this.$store.dispatch(FETCH_DATA)
     },
     watch: {
-      '$route': 'routeUpdate',
+      '$route': 'routeUpdate'
     },
     methods: {
       routeUpdate() {
         this.flag = !this.$route.path.startsWith('/admin')
-      },
-    },
+      }
+    }
   }
 </script>
 
