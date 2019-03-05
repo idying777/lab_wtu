@@ -7,7 +7,7 @@
             language="zh_CN"
             mode="wysiwyg"/>
     <el-upload
-      action=""
+      :action="actionUrl"
       :on-preview="handlePreview"
       :on-remove="handleRemove"
       :before-remove="beforeRemove"
@@ -36,6 +36,7 @@
     props: ['category'],
     data() {
       return {
+        actionUrl: 'http://localhost:8081/api/admin/files',
         title: '',
         content: '',
         fileList: []
