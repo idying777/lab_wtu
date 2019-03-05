@@ -385,7 +385,7 @@
       <workItem from="1551617043747" duration="12373000" />
       <workItem from="1551662978878" duration="17000" />
       <workItem from="1551663046455" duration="6982000" />
-      <workItem from="1551681308119" duration="1214000" />
+      <workItem from="1551681308119" duration="2683000" />
     </task>
     <task id="LOCAL-00001" summary="add ele">
       <created>1551459629784</created>
@@ -503,7 +503,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56799000" />
+    <option name="totallyTimeSpent" value="58268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -523,7 +523,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3275488" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3275488" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
@@ -615,28 +615,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="layout.." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.1.5.RELEASE/8e8ee6b7fbc90aed51973b38c27463739daa6200/spring-data-commons-2.1.5.RELEASE-sources.jar!/org/springframework/data/querydsl/EntityPathResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/kotlin/billow/fun/cms/server/m/PostRepoImpl.kt" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.1.5.RELEASE/8e8ee6b7fbc90aed51973b38c27463739daa6200/spring-data-commons-2.1.5.RELEASE-sources.jar!/org/springframework/data/querydsl/binding/QuerydslBinderCustomizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.querydsl/querydsl-core/4.2.1/f5ca41799f3695a739d5255b474fa1b68ba89371/querydsl-core-4.2.1-sources.jar!/com/querydsl/core/types/EntityPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://a6d73ddd-a027-4268-9e6f-6be2a9f87649/schema/cms/table/hibernate_sequence" />
     <entry file="das://a6d73ddd-a027-4268-9e6f-6be2a9f87649/schema/cms/table/post_categories" />
     <entry file="file://$PROJECT_DIR$/server/settings.gradle">
@@ -935,6 +913,22 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/element-ui/packages/container/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/kotlinc.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
