@@ -34,18 +34,28 @@
       title="add"
       :visible.sync="postVisible"
       width="70%">
-      <el-upload class="el-col-12"
-                 :action="fileUrl"
-                 :on-remove="handleRemove"
-                 multiple
-                 :file-list="fileList">
-        <el-button class="el-col-24" size="small" type="primary">点击上传</el-button>
-      </el-upload>
-      <el-button class="el-col-12" v-on:click="Save">Save</el-button>
-      <el-input v-model="post.title"/>
-      <editor v-model="post.content"
-              language="zh_CN"
-              mode="wysiwyg"/>
+      <el-form label-width="80px" label-position="left">
+        <el-form-item label="上传附件">
+          <el-upload :action="fileUrl" multiple
+                     :file-list="fileList"
+                     :on-success="handleSuccess"
+                     accept="*">
+            <el-button>上传</el-button>
+          </el-upload>
+        </el-form-item>
+        <el-form-item>
+          <el-button v-on:click="postSave">保存</el-button>
+        </el-form-item>
+        <el-form-item label="标题">
+          <el-input v-model="post.title"/>
+        </el-form-item>
+        <el-form-item>
+          <editor v-model="post.content"
+                  language="zh_CN"
+                  :options="editorOptions"
+                  mode="wysiwyg"/>
+        </el-form-item>
+      </el-form>
     </el-dialog>
 
     <el-dialog
@@ -96,6 +106,10 @@
         post: {
           title: '',
           content: ''
+        },
+        editMode: 'new',
+        editorOptions: {
+          hideModeSwitch: true
         }
       }
     },
@@ -127,30 +141,47 @@
       },
 
       addPost() {
+        this.editMode = 'new'
         this.postVisible = true
       },
+      editPost(post) {
+        this.post = post
+        this.editMode = 'edit'
+        this.postVisible = true
+      },
+      postSave() {
+        if (this.editMode === 'edit') {
+          const href = this.post.self.href
+          this.$api.update(href, this.post).then(() => {
+            this.$store.commit(SET_POSTS, this.$store.state.posts.filter(p => p.self.href !== href).push(this.post))
+            this.$message('edit save successful')
+          }).catch(() => {
+            this.$message('edit save failed')
+          })
 
-      Save() {
-        const n = _.now()
-        const category = this.$route.params.category
-        let post = {
-          category,
-          title: this.post.title,
-          content: this.post.content,
-          createdAt: n,
-          lastModifiedAt: n,
-          fileList: this.fileList.map(v => v.name)
+        } else {
+          const n = _.now()
+          const category = this.$route.params.category
+          let post = {
+            category,
+            title: this.post.title,
+            content: this.post.content,
+            createdAt: n,
+            lastModifiedAt: n,
+            fileList: this.fileList.map(v => v.name)
+          }
+          this.$api.post('posts', post).then(r => {
+            this.$store.commit(SET_POSTS, _.concat(this.$store.state.posts, r.data))
+            this.$message('postSave successful')
+          }).catch(() => {
+            this.$message('save failed')
+          })
         }
-        this.$api.post('posts', post).then(r => {
-          this.$store.commit(SET_POSTS, _.concat(this.$store.state.posts, r.data))
-          this.$message('Save successful')
-        }).catch(() => {
-          this.$message('save failed')
-        })
       },
 
-      handleRemove(file, fileList) {
-        console.log(file, fileList)
+      handleSuccess(r, file, fileList) {
+        console.log(fileList, file)
+        this.fileList = fileList
       }
 
     }
