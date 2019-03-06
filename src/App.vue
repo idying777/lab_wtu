@@ -1,13 +1,13 @@
 <template>
   <el-row type="flex" justify="center">
     <el-col :xs="24" :md="20" :xl="16">
-      <el-header v-if="is_display" class="height_auto">
+      <el-header v-show="is_display" class="height_auto">
         <nav-main></nav-main>
       </el-header>
       <el-main>
         <router-view/>
       </el-main>
-      <el-footer v-if="is_display" class="height_auto">
+      <el-footer v-show="is_display" class="height_auto">
         <footer-main></footer-main>
       </el-footer>
     </el-col>
