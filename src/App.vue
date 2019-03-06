@@ -22,7 +22,9 @@
 
   export default {
     data() {
-      return {}
+      return {
+        loginVisible: false
+      }
     },
     name: 'app',
     components: {

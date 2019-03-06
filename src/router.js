@@ -25,14 +25,7 @@ export default new Router({
       path: '/admin',
       name: 'admin',
       iconCls: 'el-icon-message',
-      component: () => import('./views/Admin'),
-      children: [
-        {
-          path: '/login',
-          name: 'login',
-          component: () => import('./views/Login')
-        }
-      ]
+      component: () => import('./views/Admin')
     }
 
   ]
