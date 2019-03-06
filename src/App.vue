@@ -4,7 +4,7 @@
       <el-header v-if="flag" class="height_auto">
         <nav-main></nav-main>
       </el-header>
-      <el-main>
+      <el-main style="padding: 0">
         <router-view/>
       </el-main>
       <el-footer v-if="flag" class="height_auto">

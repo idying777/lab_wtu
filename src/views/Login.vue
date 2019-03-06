@@ -43,7 +43,7 @@
             this.logged_in = true
             localStorage.setItem('username', this.form.username)
             this.logged_in = false
-            this.$router.push('/admin')
+            this.$router.push('/admin/edit')
             return true
           } else {
             console.log('error submit!!')

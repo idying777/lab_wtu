@@ -45,10 +45,6 @@
               <option value="$KOTLIN_BUNDLED$/lib/noarg-compiler-plugin.jar" />
             </array>
           </option>
-          <option name="coroutinesState" value="warn" />
-          <option name="errors">
-            <ArgumentParseErrors />
-          </option>
         </compilerArguments>
       </configuration>
     </facet>
