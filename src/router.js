@@ -20,13 +20,6 @@ export default new Router({
       path: '/category/:category',
       name: 'tab',
       component: () => import('./components/Tab')
-    },
-    {
-      path: '/admin',
-      name: 'admin',
-      iconCls: 'el-icon-message',
-      component: () => import('./views/Admin')
     }
-
   ]
 })
