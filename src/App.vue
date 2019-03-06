@@ -1,14 +1,14 @@
 <template>
   <el-row type="flex" justify="center">
     <el-col :xs="24" :md="20" :xl="16">
-      <el-header v-show="is_display" class="height_auto">
-        <nav-main></nav-main>
+      <el-header class="height_auto">
+        <nav-main/>
       </el-header>
       <el-main>
         <router-view/>
       </el-main>
       <el-footer v-show="is_display" class="height_auto">
-        <footer-main></footer-main>
+        <footer-main/>
       </el-footer>
     </el-col>
   </el-row>
@@ -22,9 +22,7 @@
 
   export default {
     data() {
-      return {
-        is_display: false
-      }
+      return {}
     },
     name: 'app',
     components: {
@@ -50,5 +48,4 @@
   .height_auto {
     height: auto !important;
   }
-
 </style>

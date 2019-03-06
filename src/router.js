@@ -9,27 +9,31 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home,
+      component: Home
     },
     {
       path: '/home',
-      redirect: '/',
+      redirect: '/'
+    },
+
+    {
+      path: '/category/:category',
+      name: 'tab',
+      component: () => import('./components/Tab')
     },
     {
       path: '/admin',
       name: 'admin',
+      iconCls: 'el-icon-message',
       component: () => import('./views/Admin'),
-    },
-    {
-      path: '/admin/login',
-      name: 'login',
-      component: () => import('./views/Login'),
-    },
-    {
-      path: '/category/:category',
-      name: 'tab',
-      component: () => import('./components/Tab'),
-    },
+      children: [
+        {
+          path: '/login',
+          name: 'login',
+          component: () => import('./views/Login')
+        }
+      ]
+    }
 
-  ],
+  ]
 })

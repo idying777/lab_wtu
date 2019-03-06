@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { FETCH_DATA, LOGIN, SET_POSTS } from './store-types'
+import { FETCH_DATA, LOGIN, LOGOUT, SET_POSTS } from './store-types'
 import { api } from './main'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    posts: []
+    posts: [],
+    logged_in: false
   },
   mutations: {
     [SET_POSTS](state, posts) {
@@ -22,12 +23,16 @@ export default new Vuex.Store({
       commit(SET_POSTS, posts)
     },
 
-    [LOGIN](context, form) {
+    [LOGIN]({commit, state}, form) {
       return api.post('admin/login', JSON.stringify(form), () => {
-        localStorage.setItem('username', form.username)
+        // localStorage.setItem('username', form.username)
+        state.logged_in = true
       })
-    }
+    },
 
+    [LOGOUT]({commit, state}) {
+      state.logged_in = false
+    }
   },
 
   getters: {

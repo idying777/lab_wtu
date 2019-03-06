@@ -1,21 +1,26 @@
 <!--suppress ES6CheckImport -->
 <template>
   <main>
-    <el-button v-on:click="Save">Save</el-button>
-    <el-input v-model="title"></el-input>
-    <editor v-model="content"
-            language="zh_CN"
-            mode="wysiwyg"/>
-    <el-upload
-      :action="actionUrl"
-      :on-preview="handlePreview"
-      :on-remove="handleRemove"
-      :before-remove="beforeRemove"
-      multiple
-      :file-list="fileList">
-      <el-button size="small" type="primary">点击上传</el-button>
-    </el-upload>
+    <el-row class="container">
+      <el-col :span="20">
+        <el-button v-on:click="Save">Save</el-button>
+        <el-input v-model="title"/>
+        <editor v-model="content"
+                language="zh_CN"
+                mode="wysiwyg"/>
+        <el-upload
+          :action="actionUrl"
+          :on-preview="handlePreview"
+          :on-remove="handleRemove"
+          :before-remove="beforeRemove"
+          multiple
+          :file-list="fileList">
+          <el-button size="small" type="primary">点击上传</el-button>
+        </el-upload>
+      </el-col>
+    </el-row>
   </main>
+
 </template>
 
 <script>
@@ -28,9 +33,11 @@
 
   export default {
     name: 'Admin',
-    components: {
-      Editor
-    },
+    components:
+      {
+        Editor
+      }
+    ,
     props: ['category'],
     data() {
       return {
@@ -39,7 +46,8 @@
         content: '',
         fileList: []
       }
-    },
+    }
+    ,
     methods: {
       Save() {
         let n = _.now()
@@ -59,16 +67,27 @@
       handleRemove(file, fileList) {
         console.log(file, fileList)
       },
+
       handlePreview(file) {
         console.log(file)
       },
+
       beforeRemove(file) {
         return this.$confirm(`确定移除 ${file.name}？`)
       }
+
     }
+
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
+  .container {
+    /*position: absolute;*/
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
 </style>
