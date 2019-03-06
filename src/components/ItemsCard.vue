@@ -3,7 +3,7 @@
     <div slot="header">
       <span>{{category_info[category]}}</span>
     </div>
-    <items v-bind:items="posts"></items>
+    <items v-bind:items="posts"/>
   </el-card>
 </template>
 
@@ -21,15 +21,15 @@
           'notify': '通知公告',
           'instrument': '仪器设备',
           'result': '科研成果',
-          'exchange': '开发交流',
-        },
+          'exchange': '开发交流'
+        }
       }
     },
     computed: {
       posts() {
         return this.$store.getters.getPostsByCategory(this.category)
-      },
-    },
+      }
+    }
   }
 </script>
 

@@ -12,7 +12,7 @@
       <el-menu-item index="/category/exchange">开发交流</el-menu-item>
       <el-menu-item><a href="https://www.wtu.edu.cn">学校首页</a></el-menu-item>
       <el-menu-item>
-        <el-button v-if="$store.logged_in" v-on:click="logout">退出登录</el-button>
+        <el-button v-if="$store.state.logged_in" v-on:click="logout">退出登录</el-button>
         <el-button v-else v-on:click="login">登录</el-button>
       </el-menu-item>
     </el-menu>
@@ -20,8 +20,7 @@
       title="系统登录"
       :visible.sync="loginVisible"
       width="30%">
-      <el-form :model="form" ref="form" label-position="left" label-width="0"
-               class="login-container">
+      <el-form :model="form" ref="form" label-position="left" label-width="0">
         <el-form-item>
           <el-input type="text" v-model="form.username" auto-complete="on" placeholder="账号"></el-input>
         </el-form-item>
@@ -32,7 +31,7 @@
           <el-checkbox v-model="remember" class="remember">记住密码</el-checkbox>
         </el-form-item>
         <el-form-item style="display: flex;justify-content: center">
-          <el-button type="primary" style="flex:1 0 0" v-on:click="submit" :loading="logged_in">登录
+          <el-button type="primary" style="flex:1 0 0" v-on:click="submit" :loading="logging">登录
           </el-button>
         </el-form-item>
       </el-form>
@@ -42,14 +41,14 @@
 
 <script>
 
-  import { LOGIN } from '../store-types'
+  import { SET_LOGGED_IN } from '../store-types'
 
   export default {
     name: 'Nav',
     data() {
       return {
         loginVisible: false,
-        logged_in: false,
+        logging: false,
         remember: false,
         form: {
           username: 'admin',
@@ -61,9 +60,8 @@
     methods: {
       logout() {
         this.$confirm('确认退出吗?', '提示', {}).then(() => {
-          sessionStorage.removeItem('username')
-          this.$router.push('/')
-        })
+          this.$store.commit(SET_LOGGED_IN, false)
+        }).catch()
       },
 
       login() {
@@ -71,17 +69,19 @@
       },
 
       submit() {
-        this.logged_in = true
-        this.$store.dispatch(LOGIN, this.form).then(() => {
-          this.logged_in = this.loginVisible = false
-          this.$router.push('/admin')
+        this.logging = true
+        this.$api.post('/admin/login', this.form).then(() => {
+          this.$store.commit(SET_LOGGED_IN, true)
+          this.loginVisible = false
+          this.logging = false
         }).catch(() => {
-          this.logged_in = false
+          this.logging = false
           this.$message('Password Error')
         })
-      }
 
+      }
     }
+
   }
 </script>
 
