@@ -33,7 +33,7 @@
 
   export default {
     name: 'home',
-    components: {ItemsCard},
+    components: {ItemsCard}
   }
 </script>
 

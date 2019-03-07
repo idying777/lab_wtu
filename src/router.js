@@ -20,6 +20,11 @@ export default new Router({
       path: '/category/:category',
       name: 'tab',
       component: () => import('./components/Tab')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('./views/Login')
     }
   ]
 })
