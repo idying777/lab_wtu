@@ -13,7 +13,7 @@
       <el-menu-item><a href="https://www.wtu.edu.cn">学校首页</a></el-menu-item>
 
       <template v-if="$store.state.logged_in">
-        <el-menu-item>
+        <el-menu-item v-if="category">
           <el-button v-on:click="addPost">添加</el-button>
         </el-menu-item>
         <el-menu-item>
@@ -25,20 +25,29 @@
 </template>
 
 <script>
+  import { SET_LOGGED_IN } from '../store-types'
+
   export default {
     name: 'Nav',
     data() {
       return {}
     },
-    components:
-      {},
+    components: {},
+    computed: {
+      category() {
+        return this.$route.params.category
+      }
+    },
     methods: {
       logout() {
         this.$confirm('确认退出吗?', '提示', {}).then(() => {
           this.$store.commit(SET_LOGGED_IN, false)
-        }).catch()
+          this.$router.push('/')
+        }).catch(() => {
+        })
       },
       addPost() {
+        this.$router.push(this.category + '/new')
       }
 
     }

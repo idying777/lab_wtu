@@ -25,6 +25,16 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: () => import('./views/Login')
+    },
+    {
+      path: '/category/:category/new',
+      name: 'PostNew',
+      component: () => import('./views/PostNew')
+    },
+    {
+      path: '/post/:title',
+      name: 'PostEdit',
+      component: () => import('./views/PostEdit')
     }
   ]
 })

@@ -11,7 +11,7 @@
       </el-form-item>
       <el-checkbox v-model="remember" class="remember">记住密码</el-checkbox>
       <el-form-item style="width:100%;">
-        <el-button type="primary" style="width:100%;" v-on:click="submit" :loading="logged_in">登录
+        <el-button type="primary" style="width:100%;" v-on:click="submit" :loading="logging">登录
         </el-button>
       </el-form-item>
     </el-form>
@@ -46,10 +46,11 @@
         this.logging = true
         this.$api.post('/admin/login', this.form).then(() => {
           this.$store.commit(SET_LOGGED_IN, true)
-          this.logging = false
+          this.$router.push('/')
         }).catch(() => {
-          this.logging = false
           this.$message('Password Error')
+        }).finally(() => {
+          this.logging = false
         })
       }
     }
