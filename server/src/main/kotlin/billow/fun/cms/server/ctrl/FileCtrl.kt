@@ -1,7 +1,6 @@
 package billow.`fun`.cms.server.ctrl
 
 import billow.`fun`.cms.server.service.StorageService
-import jdk.jfr.ContentType
 import org.springframework.core.io.Resource
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
@@ -9,7 +8,6 @@ import org.springframework.web.bind.annotation.*
 import org.springframework.web.multipart.MultipartFile
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder
 import java.util.stream.Stream
-import javax.print.attribute.standard.Media
 
 
 @RestController
