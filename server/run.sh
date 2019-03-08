@@ -9,3 +9,5 @@ while ! mysql --protocol TCP -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -e "show databa
         exit 1
     fi;
 done
+
+bash ./start_up.sh
