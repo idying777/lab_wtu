@@ -1,11 +1,7 @@
-FROM gradle:5.2.1-jdk11
+FROM openjdk:11-stretch
 
 WORKDIR /server
-ADD . /server
+ADD ./build/libs/ /server
 
-EXPOSE 8081
-
-RUN gradle bootJar
-
-ENTRYPOINT java -jar build/libs/server-0.0.1-SNAPSHOT.jar
+ENTRYPOINT java -jar server-0.0.1-SNAPSHOT.jar
 

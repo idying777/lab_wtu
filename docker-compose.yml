@@ -4,8 +4,8 @@ services:
     build: server
     ports:
       - "80:8081"
-  app:
-    build: app
+    depends_on:
+      - db
   db:
     image: "mysql:latest"
     environment:

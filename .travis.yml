@@ -1,5 +1,33 @@
+lang:
+  - node_js
+  - java
+node_js:
+  - "11.11"
+jdk: openjdk11
 services:
   - docker
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  - npm
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+install:
+  - cd app
+  - npm i
+  - cd ../server
+  - gradle assemble
+
+before_script:
+  - cd app
+  - npm run production-build
+  - mv dist/* ../server/src/main/resources/public/
+  - cd ../serve
+  - gradle bootJar
 
 script:
   - docker-compose up
