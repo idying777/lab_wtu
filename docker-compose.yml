@@ -2,19 +2,25 @@ version: "3"
 services:
   web:
     build: app
+    restart: always
     ports:
       - "80:80"
     depends_on:
       - api
   api:
     build: server
-    depends_on:
-      - db
+    restart: always
     expose:
       - "8081"
+    environment:
+      MAX_WAITING: 45
+    depends_on:
+      - db
   db:
     image: "mysql:latest"
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-    expose:
-      - "3306"
+      MYSQL_DATABASE: cms
+#    volumes:
+#      - "/db:/var/lib/mysql"
