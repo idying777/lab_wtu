@@ -20,7 +20,9 @@ services:
     image: "mysql:latest"
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: billow
+      MYSQL_PASSWORD: billow
+      $MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: cms
 #    volumes:
 #      - "/db:/var/lib/mysql"
