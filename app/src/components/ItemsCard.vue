@@ -3,7 +3,7 @@
     <div slot="header">
       <span>{{category_info[category]}}</span>
     </div>
-    <items v-bind:items="posts"/>
+    <items v-bind:items="posts" :size="16"/>
   </el-card>
 </template>
 
