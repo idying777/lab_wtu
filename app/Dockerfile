@@ -7,4 +7,4 @@ RUN npm ci
 
 COPY . .
 
-CMD ['npm','run','production-build']
+RUN npm run production-build
