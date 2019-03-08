@@ -1,8 +1,15 @@
-FROM openjdk:11-stretch
+## build stage
+#FROM gradle:5.2.1-jdk11 as build-stage
+#WORKDIR /app
+#COPY --chown=gradle . .
+#RUN gradle bootJar
+#
+## production stage
+#FROM openjdk:11-stretch as production-stage
+#COPY --from=build-stage /app/build/libs/server-0.0.1-SNAPSHOT.jar app.jar
 
-WORKDIR /server
-ADD ./build/libs/ /server
-ADD ./*.sh /server/
-RUN chmod +x ./*.sh
+FROM openjdk:11-stretch
+COPY ./build/libs/server-0.0.1-SNAPSHOT.jar app.jar
+
 EXPOSE 8081
-CMD ["bash","-c","./run.sh"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
