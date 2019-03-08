@@ -22,7 +22,7 @@ services:
     environment:
       MYSQL_USER: billow
       MYSQL_PASSWORD: billow
-      $MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: cms
 #    volumes:
 #      - "/db:/var/lib/mysql"
