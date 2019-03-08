@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    build: server
+    ports: "80:8081"
+  app:
+    build: app
+  db:
+    image: "mysql:latest"
+    environment:
+      MYSQL_ROOT_PASSWORD: root

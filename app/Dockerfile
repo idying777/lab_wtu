@@ -3,7 +3,7 @@ FROM node:latest
 WORKDIR /app
 COPY package*.json ./
 
-RUN npm ci --registry=https://registry.npm.taobao.org
+RUN npm ci
 
 COPY . .
 
