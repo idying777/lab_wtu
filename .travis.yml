@@ -14,7 +14,7 @@ cache:
 
 install:
   - cd server
-  - gradle bootJar
+  - ./gradlew bootJar
 
 script:
   - docker-compose up
