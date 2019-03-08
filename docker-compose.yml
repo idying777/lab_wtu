@@ -10,7 +10,11 @@ services:
     build: server
     depends_on:
       - db
+    expose:
+      - "8081"
   db:
     image: "mysql:latest"
     environment:
       MYSQL_ROOT_PASSWORD: root
+    expose:
+      - "3306"
