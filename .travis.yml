@@ -13,7 +13,7 @@ cache:
     - $HOME/.gradle/wrapper/
 
 install:
-  - cd ../serve
+  - cd ../server
   - gradle bootJar
 
 script:
