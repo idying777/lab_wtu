@@ -1,9 +1,13 @@
 version: "3"
 services:
   web:
-    build: server
+    build: app
     ports:
-      - "80:8081"
+      - "80:80"
+    depends_on:
+      - api
+  api:
+    build: server
     depends_on:
       - db
   db:
