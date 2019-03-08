@@ -11,27 +11,30 @@
 
   export default {
     name: 'Tab',
-    data() {
-      return {
-        posts: []
-      }
-    },
+    // data() {
+    //   return {
+    //     posts: []
+    //   }
+    // },
     computed: {
       category() {
         return this.$route.params.category
+      },
+      posts() {
+        return this.$store.getters.getPostsByCategory(this.category)
       }
     },
-    created() {
-      this.routeUpdate()
-    },
-    methods: {
-      routeUpdate() {
-        this.posts = this.$store.getters.getPostsByCategory(this.category)
-      }
-    },
-    watch: {
-      '$route': 'routeUpdate'
-    },
+    // created() {
+    //   this.routeUpdate()
+    // },
+    // methods: {
+    //   routeUpdate() {
+    //     this.posts = this.$store.getters.getPostsByCategory(this.category)
+    //   }
+    // },
+    // watch: {
+    //   '$route': 'routeUpdate'
+    // },
     components: {
       Items,
       ItemsAdmin

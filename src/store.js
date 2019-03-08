@@ -16,6 +16,9 @@ export default new Vuex.Store({
     },
     [SET_LOGGED_IN](state, is) {
       state.logged_in = is
+      if (!is) {
+        localStorage.removeItem('logged_in')
+      }
     }
   },
 
@@ -24,6 +27,10 @@ export default new Vuex.Store({
       let posts = await api.get('posts')
       posts = posts.data._embedded.posts
       commit(SET_POSTS, posts)
+      const logged_username = localStorage.getItem('logged_in')
+      if (logged_username) {
+        commit(SET_LOGGED_IN, true)
+      }
     }
   },
 

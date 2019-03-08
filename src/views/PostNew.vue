@@ -32,7 +32,7 @@
         }
         this.$api.post('posts', post).then(r => {
           this.$store.commit(SET_POSTS, _.concat(this.$store.state.posts, r.data))
-          this.$message('postSave successful')
+          this.$message('post save successful')
         }).catch(() => {
           this.$message('save failed')
         })

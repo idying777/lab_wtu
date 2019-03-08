@@ -1,17 +1,15 @@
 <template>
-  <el-row type="flex" justify="center">
-    <el-col :xs="24" :md="20" :xl="16">
-      <el-header class="height_auto">
-        <nav-main/>
-      </el-header>
-      <el-main>
-        <router-view/>
-      </el-main>
-      <el-footer v-show="is_display" class="height_auto">
-        <footer-main/>
-      </el-footer>
-    </el-col>
-  </el-row>
+  <div class="main-container">
+    <header class="height_auto">
+      <nav-main/>
+    </header>
+    <main>
+      <router-view/>
+    </main>
+    <footer class="height_auto">
+      <footer-main/>
+    </footer>
+  </div>
 </template>
 
 
@@ -46,8 +44,29 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   .height_auto {
     height: auto !important;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .main-container {
+    margin: 0 auto;
+
+    main {
+      margin: 5px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      width: 75%;
+    }
+    @media only screen and (max-width: 1200px) {
+      width: 100%;
+    }
   }
 </style>

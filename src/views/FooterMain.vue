@@ -1,136 +1,88 @@
 <template>
   <div id="footer">
-    <div class="lkplist">
-      <div class="lktitle">
+    <div class="plist">
+      <div class="plist-title">
         <h3>友情链接：</h3>
       </div>
-      <DIV class="lkcont linkft">
-        <table>
-          <tr>
-            <td>
-              <A class="c44622" style="color: aliceblue" href="http://www.moe.gov.cn/">
-                教育部
-              </A>
-            </td>
-            <td class="leaderstyle44622">|</td>
-            <td>
-              <A class="c44622" style="color: aliceblue" href="http://www.dhu.edu.cn/">
-                东华大学
-              </A>
-            </td>
-            <td class="leaderstyle44622">|</td>
-            <td>
-              <A class="c44622" style="color: aliceblue" href="http://www.tjpu.edu.cn"
-                 onclick="_addDynClicks('wburl',1193125746,5097)"
-                 target="_blank">
-                天津工业大学
-              </A>
-            </td>
-            <td class="leaderstyle44622">|</td>
-            <td>
-              <A class="c44622" style="color: aliceblue" href="http://www.zstu.edu.cn/">
-                浙江理工大学
-              </A>
-            </td>
-            <td class="leaderstyle44622">|</td>
-            <td>
-              <A class="c44622" style="color: aliceblue" href="http://www.suda.edu.cn/">
-                苏州大学
-              </A>
-            </td>
-            <td class="leaderstyle44622">|</td>
+      <div class="link">
 
-            <td>
-              <A class="c44622" style="color: aliceblue" href="http://www.jiangnan.edu.cn/">
-                江南大学
-              </A>
+        <a href="http://www.moe.gov.cn/">教育部 </a>
 
-            </td>
-            <td class="leaderstyle44622">|</td>
+        <a href="http://www.dhu.edu.cn/">东华大学 </a>
 
-            <td>
-              <A class="c44622" style="color: aliceblue" href="http://www.wtu.edu.cn/">
-                武汉纺织大学
-              </A>
-            </td>
-          </tr>
-        </table><!--#endeditable-->
-      </DIV>
+        <a href="http://www.tjpu.edu.cn">天津工业大学 </a>
+
+        <a href="http://www.zstu.edu.cn/">浙江理工大学 </a>
+
+        <a href="http://www.suda.edu.cn/">苏州大学 </a>
+
+        <a href="http://www.jiangnan.edu.cn/">江南大学 </a>
+
+      </div>
     </div>
-    <div class="botcont">联系我们:027-59367574 地址:武汉市江夏区阳光一号 邮编：430200<br/>Copyright©版权所有：数计重点实验室</div>
+    <div class="copyright">联系我们:027-59367574 地址:武汉市江夏区阳光一号 邮编：430200<br/>Copyright©版权所有：数计重点实验室</div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'FooterMain',
+    name: 'FooterMain'
   }
 </script>
 
 <style scoped lang="scss">
+  a {
+    text-decoration: none;
+  }
 
   #footer {
-    width: 100%;
+    max-width: 100%;
     background: #3a6697;
     color: #fff;
-    margin: 0 auto;
     padding: 10px 0;
     font-size: 12px;
-
-    a {
-      text-decoration: none;
-    }
   }
 
-  .lkplist {
-    width: 970px;
-    margin: 0 auto;
-    display: block;
-    overflow: hidden;
+  .plist {
+    max-width: 100%;
+    margin: 0 10%;
   }
 
-  .lktitle {
-    width: 100%;
+  .plist-title {
+    max-width: 100%;
     height: 20px;
     line-height: 20px;
     margin: 0;
-    display: block;
-    overflow: hidden;
 
     h3 {
       margin: 0;
     }
   }
 
-  .lkcont {
-    width: 100%;
-    padding: 0 0;
-    display: block;
-    overflow: hidden;
-    text-align: left;
+  .link {
+    a {
+      color: #fff;
+      max-width: 100%;
+      padding: 0;
+      text-align: left;
+
+      &:link, &:visited {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: #0d69b4
+      }
+    }
+
+    span {
+      display: inline-block;
+    }
   }
 
-  .linkft {
-    position: relative;
-  }
-
-  .linkft a:link, .linkft a:visited {
-    color: #474747;
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 14px;
-  }
-
-  .linkft a:hover {
-    color: #0d69b4
-  }
-
-  .linkft span {
-    display: inline-block;
-  }
-
-  .botcont {
-    width: 970px;
+  .copyright {
     margin: 0 auto;
     text-align: center;
     line-height: 30px;

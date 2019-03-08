@@ -5,22 +5,24 @@
     </div>
     <div>
       <el-row :gutter="10">
-        <el-col :md="8" :sm="12">
-          about
+        <el-col class="card">
+          <el-card class="box">
+            about
+          </el-card>
         </el-col>
-        <el-col :md="8" :sm="12">
+        <el-col class="card">
           <items-card category="news"/>
         </el-col>
-        <el-col :md="8" :sm="12">
+        <el-col class="card">
           <items-card category="notify"/>
         </el-col>
-        <el-col :md="8" :sm="12">
+        <el-col class="card">
           <items-card category="instrument"/>
         </el-col>
-        <el-col :md="8" :sm="12">
+        <el-col class="card">
           <items-card category="result"/>
         </el-col>
-        <el-col :md="8" :sm="12">
+        <el-col class="card">
           <items-card category="exchange"/>
         </el-col>
       </el-row>
@@ -37,13 +39,21 @@
   }
 </script>
 
-<style scoped>
-  main {
-    margin-right: 300px;
+<style scoped lang="scss">
+  img.bk {
+    max-width: 100%;
   }
 
-  aside {
-    width: 290px;
-    float: right;
+  .card {
+    @media only screen and (min-width: 1200px) {
+      width: 33.3%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      width: 50%;
+    }
+    @media only screen and (max-width: 500px) {
+      width: 100%;
+    }
   }
 </style>

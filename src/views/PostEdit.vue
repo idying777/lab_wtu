@@ -22,6 +22,11 @@
     },
     mounted() {
       this.post = this.$store.state.posts.find(p => p.title === this.title)
+    },
+    methods: {
+      onSave() {
+        console.log('save '+post)
+      }
     }
   }
 </script>
