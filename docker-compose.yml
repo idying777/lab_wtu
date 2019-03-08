@@ -1,12 +1,12 @@
 version: "3"
 services:
-  #  web:
-  #    build: app
-  #    restart: always
-  #    ports:
-  #      - "80:80"
-  #    depends_on:
-  #      - api
+  web:
+    build: app
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - api
   api:
     build: server
     restart: always
