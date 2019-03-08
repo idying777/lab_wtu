@@ -1,6 +1,9 @@
 FROM gradle:5.2.1-jdk11
 
-WORKDIR /app
-ADD ../app /app
+WORKDIR /server
+ADD . /server
 
+EXPOSE 8081
+
+CMD ['gradle','bootRun']
 
