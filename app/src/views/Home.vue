@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <div>
-      <img class="bk" src="../assets/banner.png" alt="background"/>
+    <div class="banner banner-home">
+      <img src="../assets/small.jpg" alt="background"/>
     </div>
     <div class="container">
       <el-row :gutter="10">
@@ -40,23 +40,14 @@
 </script>
 
 <style scoped lang="scss">
-  img.bk {
-    max-width: 100%;
-  }
-
-  .container {
-  }
+  @import "../assets/layout.scss";
 
   .card {
-    @media only screen and (min-width: 1200px) {
-      width: 33.3%;
-    }
+    min-width: 270px;
+    max-width: 360px;
+  }
 
-    @media only screen and (max-width: 1200px) {
-      width: 50%;
-    }
-    @media only screen and (max-width: 500px) {
-      width: 100%;
-    }
+  .banner-home {
+    height: 360px;
   }
 </style>

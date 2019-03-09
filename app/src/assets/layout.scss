@@ -1,0 +1,19 @@
+$min_width: 825px;
+.container {
+  max-width: 1095px;
+  min-width: 825px;
+  margin: 0 auto;
+}
+
+.banner {
+  overflow: hidden;
+  min-width: $min_width;
+  margin-top: -1px;
+
+  img {
+    position: absolute;
+    left: 50%;
+    width: 1920px;
+    margin-left: -960px;
+  }
+}

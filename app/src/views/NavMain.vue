@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <el-menu default-active="1" mode="horizontal" :router="true"
-             background-color="#545c64"
+  <div class="header">
+    <el-menu class="container menu" default-active="1" mode="horizontal" :router="true"
+             background-color="inherit"
              text-color="#fff"
-             active-text-color="#ffd04b">
+             active-text-color="#421810">
       <el-menu-item index="/home">首页</el-menu-item>
 
       <el-submenu index="2">
@@ -62,9 +62,19 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  @import "../assets/layout.scss";
+
   a {
     display: block;
     text-decoration: none;
+  }
+
+  .header {
+    background-color: #0d295d;
+
+    .menu {
+      border-bottom: inherit;
+    }
   }
 </style>

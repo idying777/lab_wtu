@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="banner">Banner</div>
+    <div class="banner">
+      <img src="../assets/small.jpg" alt="background">
+    </div>
     <category></category>
   </div>
 </template>
@@ -16,10 +18,7 @@
   }
 </script>
 
-<style scoped>
-  .banner {
-    width: 100%;
-    height: 200px;
-    background-color: red;
-  }
+<style scoped lang="scss">
+  @import "../assets/layout.scss";
+
 </style>

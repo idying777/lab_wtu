@@ -5,7 +5,7 @@
     </div>
     <div class="card-body">
       <el-row v-bind:key="post.title" v-for="post of posts.slice(0,8)" type="flex" justify="space-between">
-        <el-col :span="18">{{post.title}}</el-col>
+        <el-col :span="18">{{post.title.slice(0,16)}}</el-col>
         <el-col :span="6" class="hidden-md-and-down" style="text-align: right">
           {{post.createdAt.slice(0,10)}}
         </el-col>
