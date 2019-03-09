@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { FETCH_DATA, SET_LOGGED_IN, SET_POSTS } from './store-types'
+import { FETCH_DATA, SET_FILES, SET_LOGGED_IN, SET_POSTS } from './store-types'
 import { api } from './main'
 
 Vue.use(Vuex)
@@ -8,6 +8,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     posts: [],
+    files: [],
     logged_in: false
   },
   mutations: {
@@ -19,14 +20,20 @@ export default new Vuex.Store({
       if (!is) {
         localStorage.removeItem('logged_in')
       }
+    },
+    [SET_FILES](state, files) {
+      state.files = files
     }
   },
 
   actions: {
     async [FETCH_DATA]({commit}) {
-      let posts = await api.get('posts')
-      posts = posts.data._embedded.posts
-      commit(SET_POSTS, posts)
+      const posts = await api.get('posts')
+      commit(SET_POSTS, posts.data._embedded.posts)
+
+      const files = await api.get('files')
+      commit(SET_FILES, files.data)
+
       const logged_username = localStorage.getItem('logged_in')
       if (logged_username) {
         commit(SET_LOGGED_IN, true)

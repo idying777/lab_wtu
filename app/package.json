@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --mode development",
     "production-build": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint"
   },
@@ -12,6 +12,7 @@
     "@toast-ui/vue-editor": "^1.0.4",
     "axios": "^0.18.0",
     "element-ui": "^2.4.5",
+    "semantic-ui-vue": "^0.8.1",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"

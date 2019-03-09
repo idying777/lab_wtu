@@ -1,5 +1,6 @@
 package billow.`fun`.cms.server.ctrl
 
+import billow.`fun`.cms.server.model.File
 import billow.`fun`.cms.server.service.StorageService
 import org.springframework.core.io.Resource
 import org.springframework.http.MediaType
@@ -22,11 +23,13 @@ class FileCtrl(
     }
 
     @GetMapping("/files")
-    fun getAllFile(): ResponseEntity<Stream<String>> {
+    fun getAllFile(): ResponseEntity<Stream<File>> {
         return ResponseEntity.ok(storageService.loadAll()
                 .map { path ->
-                    MvcUriComponentsBuilder.fromMethodName(this.javaClass,
-                            "getFile", path.fileName.toString()).build().toString()
+                    val filename = path.fileName.toString()
+                    File(filename,
+                            MvcUriComponentsBuilder.fromMethodName(this.javaClass, "getFile", filename)
+                                    .build().toString())
                 })
     }
 

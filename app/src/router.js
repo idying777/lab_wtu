@@ -11,21 +11,30 @@ export default new Router({
       name: 'home',
       component: Home
     },
+
     {
       path: '/home',
       redirect: '/'
     },
 
     {
-      path: '/category/:category',
-      name: 'tab',
-      component: () => import('./components/Tab')
-    },
-    {
       path: '/login',
       name: 'login',
       component: () => import('./views/Login')
     },
+
+    {
+      path: '/files',
+      name: 'files',
+      component: () => import('./views/Files')
+    },
+
+    {
+      path: '/category/:category',
+      name: 'tab',
+      component: () => import('./views/CategoryView')
+    },
+
     {
       path: '/category/:category/new',
       name: 'PostNew',

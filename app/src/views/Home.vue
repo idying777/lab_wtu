@@ -3,7 +3,7 @@
     <div>
       <img class="bk" src="../assets/banner.png" alt="background"/>
     </div>
-    <div>
+    <div class="container">
       <el-row :gutter="10">
         <el-col class="card">
           <el-card class="box">
@@ -42,6 +42,9 @@
 <style scoped lang="scss">
   img.bk {
     max-width: 100%;
+  }
+
+  .container {
   }
 
   .card {

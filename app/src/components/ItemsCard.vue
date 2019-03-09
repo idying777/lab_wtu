@@ -3,16 +3,20 @@
     <div slot="header">
       <span>{{category_info[category]}}</span>
     </div>
-    <items v-bind:items="posts" :size="16"/>
+    <div class="card-body">
+      <el-row v-bind:key="post.title" v-for="post of posts.slice(0,8)" type="flex" justify="space-between">
+        <el-col :span="18">{{post.title}}</el-col>
+        <el-col :span="6" class="hidden-md-and-down" style="text-align: right">
+          {{post.createdAt.slice(0,10)}}
+        </el-col>
+      </el-row>
+    </div>
   </el-card>
 </template>
 
 <script>
-  import Items from './Items'
-
   export default {
     name: 'ItemsCard',
-    components: {Items},
     props: ['category'],
     data() {
       return {
@@ -36,5 +40,9 @@
 <style scoped>
   .box {
     height: 300px;
+  }
+
+  .card-body {
+    font-size: 13px;
   }
 </style>

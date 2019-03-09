@@ -49,7 +49,7 @@
     height: auto !important;
   }
 
-  html, body {
+  html, body, main {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -57,11 +57,6 @@
 
   .main-container {
     margin: 0 auto;
-
-    main {
-      margin: 5px;
-    }
-
     @media only screen and (min-width: 1200px) {
       width: 75%;
     }
