@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="banner banner-home">
+    <div class="banner">
       <img src="../assets/small.jpg" alt="background"/>
     </div>
     <div class="container">
@@ -40,14 +40,9 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../assets/layout.scss";
-
   .card {
     min-width: 270px;
     max-width: 360px;
   }
 
-  .banner-home {
-    height: 360px;
-  }
 </style>

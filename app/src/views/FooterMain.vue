@@ -1,5 +1,5 @@
 <template>
-  <div id="footer">
+  <div class="footer container">
     <div class="plist">
       <div class="plist-title">
         <h3>友情链接：</h3>
@@ -35,8 +35,7 @@
     text-decoration: none;
   }
 
-  #footer {
-    max-width: 100%;
+  .footer {
     background: #0d295d;
     color: #fff;
     padding: 10px 0;
@@ -44,15 +43,12 @@
   }
 
   .plist {
-    max-width: 100%;
-    margin: 0 10%;
+    margin: 0 30px;
   }
 
   .plist-title {
-    max-width: 100%;
     height: 20px;
     line-height: 20px;
-    margin: 0;
 
     h3 {
       margin: 0;
@@ -62,7 +58,6 @@
   .link {
     a {
       color: #fff;
-      max-width: 100%;
       padding: 0;
       text-align: left;
 

@@ -19,6 +19,4 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../assets/layout.scss";
-
 </style>

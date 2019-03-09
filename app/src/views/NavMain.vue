@@ -3,7 +3,7 @@
     <el-menu class="container menu" default-active="1" mode="horizontal" :router="true"
              background-color="inherit"
              text-color="#fff"
-             active-text-color="#421810">
+             active-text-color="#A2F8C0">
       <el-menu-item index="/home">首页</el-menu-item>
 
       <el-submenu index="2">
@@ -63,8 +63,6 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../assets/layout.scss";
-
   a {
     display: block;
     text-decoration: none;

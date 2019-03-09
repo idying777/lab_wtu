@@ -5,6 +5,7 @@ import axios from 'axios'
 import store from './store'
 import './plugins/element.js'
 import 'element-ui/lib/theme-chalk/display.css'
+import './assets/layout.scss'
 
 Vue.config.productionTip = false
 
