@@ -5,28 +5,27 @@ import billow.fun.cms.server.model.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
 public class LoginController {
-    @Autowired
-    private UserRepo userRepo;
+    private final UserRepo userRepo;
 
-    @RequestMapping(value = "/api/admin/login", method = RequestMethod.POST)
+    @Autowired
+    public LoginController(UserRepo userRepo) {
+        this.userRepo = userRepo;
+    }
+
+    @PostMapping(value = "/api/admin/login")
     public ResponseEntity<String> login(@RequestBody User user) {
         User u = userRepo.findByUsername(user.getUsername());
         if (u != null) {
-            if(u.getPassword().equals(user.getPassword())){
+            if (u.getPassword().equals(user.getPassword())) {
                 return ResponseEntity.ok("login success");
+            } else {
+                return ResponseEntity.status(226).body("password error");
             }
-            else{
-                return ResponseEntity.status(HttpStatus.FORBIDDEN).body("login error");
-            }
-
         } else {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("login error");
         }
