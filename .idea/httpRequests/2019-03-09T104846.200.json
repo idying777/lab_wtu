@@ -1,0 +1,104 @@
+{
+  "_embedded": {
+    "posts": [
+      {
+        "title": "关于开展实验室危险废物自查登记的通知",
+        "content": "各二级科研、教学部门：\n\n    为了加强实验室危险废弃物管理，进一步全面掌握我校危险废物种类、年产量、储存及排放情况等，推进危险废物申报工作，现特就实验室危险废弃物自查登记相关事宜通知如下：\n\n1、请各产生、储存危险废物的相关部门，根据《国家危险废物名录》（详见附件1）涉及的危险废物，对本部门危险废物情况进行详细排查、摸清底数。\n\n2、根据排查结果，涉及危险废物的部门，按照《武汉纺织大学危险废物申报登记表》（详见附件2）要求，对本单位危险废物情况认真填报。\n\n3、《武汉纺织大学危险废物申报登记表》提交时间：2015年3月23日前，纸质版单位分管领导签字，加盖公章后交资产处。电子版提交至（652518720@qq.com）邮箱.\n\n4、对自查危险废物存放安全隐患，请于2015年3月23日前将需要亟待解决的问题报资产处汇总后报学校统一研究解决。\n\n附件1：《国家危险废物名录》\n\n附件2：《武汉纺织大学危险废物申报登记表》\n\n资产与实验室管理处\n\n2015年3月17日",
+        "category": "notify",
+        "fileList": [],
+        "createdAt": "2019-03-09T08:43:48.000+0000",
+        "lastModifiedAt": "2019-03-09T08:43:48.000+0000",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8081/api/posts/2"
+          },
+          "post": {
+            "href": "http://localhost:8081/api/posts/2"
+          }
+        }
+      },
+      {
+        "title": "热重分析仪(TG)",
+        "content": "modified",
+        "category": "instrument",
+        "fileList": [],
+        "createdAt": "2019-03-09T08:43:48.000+0000",
+        "lastModifiedAt": "2019-03-09T14:48:32.000+0000",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8081/api/posts/3"
+          },
+          "post": {
+            "href": "http://localhost:8081/api/posts/3"
+          }
+        }
+      },
+      {
+        "title": "澳大利亚棉花公司阿伦先生访问我校",
+        "content": "澳大利亚棉花公司阿伦先生访问我校\n\n    5月13日上午，澳大利亚棉花公司负责人阿伦先生受王训该院长邀请访问我校，受到了副校长黄运平亲切接见，并考查我校国际合作项目“澳棉高支精纺纱线新技术研究”项目进展情况。\n\n        \n\n     阿伦先生深入纺织学院实验室，与“澳棉高支精纺纱线新技术研究”项目负责人、学院分党委书记张尚勇及课题组成员详细交流、了解项目进展情况，并查看了该项目拥有的目前最新纺纱技术纺制的高支澳棉纱线。随后学院实验室主任陈军等教师向阿伦先生介绍了纺织学院主要仪器设备和实验室承担的重大科研项目情况。\n\n     阿伦先生对“澳棉高支精纺纱线新技术研究”项目进展情况表示非常满意，高度赞扬了我校实验室建设取得的成效，并与王训该院长和张尚勇书记就下一步项目合作展开了深入座谈。\n\n     据悉，纺织学院承担的国际合作项目“澳棉高支精纺纱线新技术研究”由澳大利亚棉花公司资助，澳大利亚迪肯大学、CSRIO研究所和我校三方共同承担研究，纺织学院获项目经费近百万人民币。",
+        "category": "exchange",
+        "fileList": [],
+        "createdAt": "2019-03-09T08:43:48.000+0000",
+        "lastModifiedAt": "2019-03-09T08:43:48.000+0000",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8081/api/posts/4"
+          },
+          "post": {
+            "href": "http://localhost:8081/api/posts/4"
+          }
+        }
+      },
+      {
+        "title": "科研成果—论文",
+        "content": "科研成果—论文\n\n序号\n\n成 果 名 称\n\n完成人\n\n时间\n\n1\n\nStudy on the Bending Fatigue Behavior of Single Aramid\n\nFibers by a Novel Bending Fatigue Test Method\n\n蔡光明\n\nJournal of Fiber Bioengineering and Informatics, 2014.7(1)13-22\n\n2\n\nIn-situ synthesis of gold nanoparticles for multifunctionalization of silk fabrics\n\n唐彬\n\nDyes and Pigments, 2014, Vol.103\n\n3\n\nGrowth of primary hippocampal neurons on multichannel silk fibroin scaffold\n\n张强\n\nFibers and Polymers, 2014,15,41-46\n\n4\n\nEffective removal of dyes from aqueous solution using ultrafine silk fibroin powder\n\n肖仕丽\n\nAdvanced Powder Technology, 2014,No.1，574-581\n\n5\n\nStudied on kinetic and thermodynamic parameters of natural dye curcumin on PLA fibre\n\n吴济宏\n\nIndian Journal of Fibre & Textile Research, 2013，Vol.38,pp424-426\n\n6\n\nA novel heparin release system based on blends of biomedical polyurethane and native silk fibroin powder\n\n杨红军\n\n(1/4)\n\nJournal of Controlled Release, \n\n152（2011）. 106-108. \n\nISSN:0168-3659 影响因子：7.705\n\n7\n\nSelf-assembled hairy ball-like Co3O4 nanostructures for lithium ion batteries\n\n方东\n\n（1/12）\n\nJournal of Materials Chemistry A，1（2013）, 13203-13208\n\nISSN:0510-5842影响因子：7.443\n\n8\n\nHighly efficient light harvesting ruthenium sensitizers for dye-sensitized solar cells featuring triphenylamine donor antennas\n\n许杰\n\n（通讯作者）\n\nJournal Materials Chemistry A, 2（2014）: 4945-4953\n\nISSN:0510-5842影响因子：7.443\n\n9\n\nStretchable Conductive Polypyrrole/\n\nPolyurethane (PPy/PU) Strain\n\nSensor with Netlike Microcracks for Human Breath Detection\n\n李沐芳\n\n（1/5）\n\nACS Appllied Materials and Interfaces，24（2013）,70-74\n\nISSN：1944-8244影响因子：6.723\n\n10\n\nA flexible polypyrrole-coated fabric counter electrode for dye-sensitized solar cells\n\n许杰\n\n（1/10）\n\nJournal of Power Sources, 257（2014）: 230-236\n\nISSN：0378-7753影响因子：6.217\n\n11\n\nA novel hierarchically structured and highly hydrophilic poly(vinyl alcohol-co-ethylene)/poly(ethylene terephthalate) nanoporous membrane for lithium-ion battery separator\n\n王栋\n\n（通讯作者）\n\nJournal of Power Sources, 257（2014）: 230-236\n\nISSN：0378-7753影响因子：6.217\n\n12\n\nNanocomposite membranes based on quaternized polysulfone and functionalized montmorillonite for anion-exchange membranes\n\n张宏伟\n\n（通讯作者）\n\nJournal of Power Sources， 286（2015）：258–263\n\nISSN：0378-7753影响因子：6.217\n\n13\n\nLayer-by-layer structured nanofiber membranes with photoinduced self-cleaning functions\n\n王栋\n\n（1/6）\n\nThe Journal of Physical Chemistry, Part C, 115（2011）, 6825-6832 ISSN:1932-7447影响因子：4.772\n\n14\n\nStretchable conductive polyurethane elastomer in situ polymerized with multi-walled carbon nanotubes\n\n王栋\n\n（1/6）\n\nJournal of Materials Chemistry C，1（2013）, 2744-2749\n\nISSN：0959-9428影响因子：4.696\n\n15\n\nHigh performance hybrid Al2O3/poly(vinyl alcohol-co-ethylene) nanofibrous membrane for lithium-ion battery separator\n\n刘琼珍\n\n（1/9）\n\nElectrochimica Acta, 176(2015): 949-955\n\nISSN:: 0013-4686 影响因子：4.504\n\n16\n\nCatalytic generation of hydroxyl radicals by dioxygen-mediated oxidation of p-aminophenol by simple cobalt(II) ions in bicarbonate aqueous solution for use in Acid Orange 7 decolorization\n\n徐爱华\n\n（通讯作者）\n\njournal of chemistry，ISSN:1369-9261，2014，Vol.10 SCI\n\n17\n\nEfficient H2O2 Oxidation of Organic Dyes Catalyzed by Simple Copper(II) Ions in Bicarbonate Aqueous Solution\n\n徐爱华\n\n（通讯作者）\n\nindustrial & engineering chemistry research ，ISSN: 0888-5885，2014，Vol.53，SCI\n\n18\n\nManganese oxide octahedral molecular sieve (OMS-2) as an effective catalyst for degradation of organic dyes in aqueous solutions in the presence of peroxymonosulfateOriginal\n\n徐爱华\n\n（通讯作者）\n\nAPPLIED CATALYSIS B-ENVIRONMENTAL，ISSN: 0926-3373，2015，Vol.164，SCI\n\n19\n\nProduction of a value added compound from the H-acid wastewater—Bioflocculants by Klebsiella pneumoniae\n\n周建刚\n\n（通讯作者）\n\nColloids and Surfaces B: Biointerfaces，ISSN: 0927-7765，2014,vol 12，SCI\n\n20\n\nProduction of a bioflocculant from chromotropic acid waste waterand its application in steroid estrogen removal\n\n周建刚\n\n（通讯作者）\n\nColloids and Surfaces B: Biointerfaces，ISSN: 0927-7765，2014,vol 12，SCI\n\n21\n\nCharacterization of a bioflocculant MBF-5 by Klebsiella pneumoniae and its application in Acanthamoeba cysts removal\n\n周建刚\n\n（通讯作者）\n\nBioresource Technology，ISSN: 0960-8524, 2013,vol 5，SCI\n\n22\n\nRemoval of copper from acid wastewater of bioleaching by adsorption onto ramie residue and uptake by Trichoderma viride\n\n王布匀\n\nBioresource Technology，ISSN: 0960-8524，2013,vol 8，SCI\n\n23\n\nBioleaching of heavy metal from woody biochar using Acidithiobacillus ferrooxidans and activation for adsorption\n\n王布匀\n\nBioresource Technology，ISSN: 0960-8524, 2013, vol 6，SCI\n\n24\n\nDegradation of disperse blue E-4R in aqueous solution by zero-va",
+        "category": "result",
+        "fileList": [],
+        "createdAt": "2019-03-09T08:43:48.000+0000",
+        "lastModifiedAt": "2019-03-09T08:43:48.000+0000",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8081/api/posts/5"
+          },
+          "post": {
+            "href": "http://localhost:8081/api/posts/5"
+          }
+        }
+      },
+      {
+        "title": "sdsad",
+        "content": "sadsad",
+        "category": "instrument",
+        "fileList": [],
+        "createdAt": "2019-03-09T13:57:58.000+0000",
+        "lastModifiedAt": "2019-03-09T13:57:58.000+0000",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8081/api/posts/9"
+          },
+          "post": {
+            "href": "http://localhost:8081/api/posts/9"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:8081/api/posts{?page,size,sort}",
+      "templated": true
+    },
+    "profile": {
+      "href": "http://localhost:8081/api/profile/posts"
+    },
+    "search": {
+      "href": "http://localhost:8081/api/posts/search"
+    }
+  },
+  "page": {
+    "size": 20,
+    "totalElements": 5,
+    "totalPages": 1,
+    "number": 0
+  }
+}

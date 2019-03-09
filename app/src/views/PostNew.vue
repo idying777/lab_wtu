@@ -1,9 +1,9 @@
 <template>
-  <post-form v-model="post" :on-save="onSave"></post-form>
+  <post-form v-model="post" :on-save="handleSave"></post-form>
 </template>
 
 <script>
-  import PostForm from './PostForm'
+  import PostForm from '../components/PostForm'
   import { SET_POSTS } from '../store-types'
 
   export default {
@@ -24,17 +24,17 @@
       }
     },
     methods: {
-      onSave() {
+      handleSave(post) {
         post = {
-          ...this.post,
+          ...post,
           fileList: this.post.fileList.map(f => f.name),
           category: this.category
         }
         this.$api.post('posts', post).then(r => {
-          this.$store.commit(SET_POSTS, _.concat(this.$store.state.posts, r.data))
+          this.$store.commit(SET_POSTS, this.$store.state.posts.concat(r.data))
           this.$message('post save successful')
-        }).catch(() => {
-          this.$message('save failed')
+        }).catch((err) => {
+          this.$message('save failed', err)
         })
       }
     }

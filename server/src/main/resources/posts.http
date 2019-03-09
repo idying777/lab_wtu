@@ -25,3 +25,25 @@ Content-Type: application/json
 }
 
 ###
+
+PATCH http://localhost:8081/api/posts/3
+Content-Type: application/json
+
+{
+  "title": "热重分析仪(TG)",
+  "content": "modified",
+  "category": "instrument",
+  "fileList": [],
+  "createdAt": "2019-03-09T08:43:48.000+0000",
+  "lastModifiedAt": "2019-03-09T08:43:48.000+0000",
+  "_links": {
+    "self": {
+      "href": "http://localhost:8081/api/posts/3"
+    },
+    "post": {
+      "href": "http://localhost:8081/api/posts/3"
+    }
+  }
+}
+
+###

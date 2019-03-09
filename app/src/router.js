@@ -40,8 +40,15 @@ export default new Router({
       name: 'PostNew',
       component: () => import('./views/PostNew')
     },
+
     {
       path: '/post/:title',
+      name: 'PostView',
+      component: () => import('./views/PostView')
+    },
+
+    {
+      path: '/post/:title/edit',
       name: 'PostEdit',
       component: () => import('./views/PostEdit')
     }

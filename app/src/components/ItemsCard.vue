@@ -4,11 +4,15 @@
       <span>{{category_info[category]}}</span>
     </div>
     <div class="card-body">
-      <el-row v-bind:key="post.title" v-for="post of posts.slice(0,8)" type="flex" justify="space-between">
-        <el-col :span="18">{{post.title.slice(0,16)}}</el-col>
-        <el-col :span="6" class="hidden-md-and-down" style="text-align: right">
-          {{post.createdAt.slice(0,10)}}
-        </el-col>
+      <el-row type="flex" justify="space-between"
+              v-bind:key="post.title"
+              v-for="post of posts.slice(0,8)">
+        <a :href="'/#/post/'+post.title">
+          <el-col :span="18">{{post.title.slice(0,16)}}</el-col>
+          <el-col :span="6" class="hidden-md-and-down" style="text-align: right">
+            {{post.createdAt.slice(0,10)}}
+          </el-col>
+        </a>
       </el-row>
     </div>
   </el-card>

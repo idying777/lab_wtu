@@ -3,6 +3,7 @@ package billow.`fun`.cms.server.ctrl
 import billow.`fun`.cms.server.model.File
 import billow.`fun`.cms.server.service.StorageService
 import org.springframework.core.io.Resource
+import org.springframework.http.HttpMethod
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*

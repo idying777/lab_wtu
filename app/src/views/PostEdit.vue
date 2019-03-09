@@ -1,31 +1,40 @@
 <template>
-  <post-form v-model="post" :on-save="onSave"></post-form>
+  <post-form :post="post" :on-save="handleSave"></post-form>
 </template>
 
 <script>
-  import PostForm from './PostForm'
+  import PostForm from '../components/PostForm'
+  import { SET_POSTS } from '../store-types'
+  import { parsePostUrl } from '../util.js'
 
   export default {
     name: 'PostEdit',
     components: {
       PostForm
     },
-    data() {
-      return {
-        post: {}
-      }
-    },
     computed: {
       title() {
         return this.$route.params.title
+      },
+      post() {
+        return this.$store.state.posts.find(p => p.title === this.title)
       }
     },
-    mounted() {
-      this.post = this.$store.state.posts.find(p => p.title === this.title)
-    },
+
     methods: {
-      onSave() {
-        console.log('save '+post)
+      handleSave(post) {
+        this.$api.patch(parsePostUrl(post), post).then(r => {
+          this.$store.commit(SET_POSTS, this.$store.state.posts.filter(p => parsePostUrl(p) !== parsePostUrl(post)))
+          this.addPost(r.data)
+          this.$router.push(`/category/${post.category}`)
+          this.$message('save success')
+        }).catch(e => {
+          this.addPost(post)
+          this.$message('save failed', e)
+        })
+      },
+      addPost(post) {
+        this.$store.commit(SET_POSTS, this.$store.state.posts.concat(post))
       }
     }
   }

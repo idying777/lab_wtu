@@ -10,7 +10,7 @@
       </el-upload>
     </el-form-item>
     <el-form-item>
-      <el-button v-on:click="onSave">保存</el-button>
+      <el-button v-on:click="handleSave">保存</el-button>
     </el-form-item>
     <el-form-item label="标题">
       <el-input v-model="post.title"/>
@@ -29,7 +29,6 @@
   import 'tui-editor/dist/tui-editor-contents.css'
   import 'codemirror/lib/codemirror.css'
   import { Editor } from '@toast-ui/vue-editor'
-  import { SET_POSTS } from '../store-types'
 
   export default {
     name: 'PostForm',
@@ -62,17 +61,9 @@
     },
 
     methods: {
-      postSave() {
-        const href = this.post.self.href
-        this.$api.update(href, this.post).then(() => {
-          this.$store.commit(SET_POSTS, this.$store.state.posts.filter(p => p.self.href !== href).push(this.post))
-          this.$message('edit save successful')
-        }).catch(() => {
-          this.$message('edit save failed')
-        })
-
+      handleSave() {
+        this.onSave(this.post)
       },
-
       handleSuccess(r, file, fileList) {
         console.log(fileList, file)
         this.post.fileList = fileList
