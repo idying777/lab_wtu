@@ -37,7 +37,7 @@
 
   #footer {
     max-width: 100%;
-    background: #3a6697;
+    background: #0d295d;
     color: #fff;
     padding: 10px 0;
     font-size: 12px;

@@ -1,12 +1,12 @@
 <template>
   <div class="main-container">
-    <header class="height_auto">
+    <header>
       <nav-main/>
     </header>
     <main>
       <router-view/>
     </main>
-    <footer class="height_auto">
+    <footer>
       <footer-main/>
     </footer>
   </div>
@@ -45,28 +45,14 @@
 </script>
 
 <style lang="scss">
-  .height_auto {
-    height: auto !important;
-  }
-
-  html, body {
+  html, body, main {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+  
 
-  .main-container {
-    margin: 0 auto;
-
-    main {
-      margin: 5px;
-    }
-
-    @media only screen and (min-width: 1200px) {
-      width: 75%;
-    }
-    @media only screen and (max-width: 1200px) {
-      width: 100%;
-    }
+  header {
+    height: 61px;
   }
 </style>

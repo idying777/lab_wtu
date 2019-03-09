@@ -1,15 +1,23 @@
 <template>
-  <div>
-    <el-menu default-active="1" mode="horizontal" :router="true"
-             background-color="#545c64"
+  <div class="header">
+    <el-menu class="container menu" default-active="1" mode="horizontal" :router="true"
+             background-color="inherit"
              text-color="#fff"
-             active-text-color="#ffd04b">
+             active-text-color="#421810">
       <el-menu-item index="/home">首页</el-menu-item>
-      <el-menu-item index="/function">机构职能</el-menu-item>
+
+      <el-submenu index="2">
+        <template slot="title">机构职能</template>
+        <el-menu-item index="2-1">选项1</el-menu-item>
+        <el-menu-item index="2-2">选项2</el-menu-item>
+        <el-menu-item index="2-3">选项3</el-menu-item>
+      </el-submenu>
+
       <el-menu-item index="/category/team">研究团队</el-menu-item>
       <el-menu-item index="/category/result">科研成果</el-menu-item>
       <el-menu-item index="/category/instrument">仪器设备</el-menu-item>
       <el-menu-item index="/category/exchange">开发交流</el-menu-item>
+      <el-menu-item index="/files">下载专区</el-menu-item>
       <el-menu-item><a href="https://www.wtu.edu.cn">学校首页</a></el-menu-item>
 
       <template v-if="$store.state.logged_in">
@@ -54,9 +62,19 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  @import "../assets/layout.scss";
+
   a {
     display: block;
     text-decoration: none;
+  }
+
+  .header {
+    background-color: #0d295d;
+
+    .menu {
+      border-bottom: inherit;
+    }
   }
 </style>

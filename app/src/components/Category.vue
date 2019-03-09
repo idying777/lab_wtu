@@ -1,17 +1,13 @@
 <template>
-  <el-card>
-    <items v-bind:items="posts"/>
+  <el-card cl>
+    {{category}}
   </el-card>
 </template>
 
 <script>
-  import Items from './Items'
-
   export default {
     name: 'Tab',
-    components: {
-      Items
-    },
+    components: {},
     computed: {
       category() {
         return this.$route.params.category
