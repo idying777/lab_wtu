@@ -6,7 +6,7 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - api
+      - db
   api:
     build: server
     restart: always
@@ -16,7 +16,7 @@ services:
       MAX_WAITING: 600
       DATA_BASE_HOST: db
     depends_on:
-      - db
+      - web
   db:
     image: "mysql:latest"
     restart: always
