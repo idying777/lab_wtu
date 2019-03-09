@@ -2,7 +2,7 @@
 FROM node:latest as build-stage
 WORKDIR /app
 COPY package*.json ./
-RUN npm install
+RUN SASS_BINARY_SITE=http://npm.taobao.org/mirrors/node-sass npm install --registry=https://registry.npm.taobao.org
 COPY . .
 RUN npm run production-build
 
