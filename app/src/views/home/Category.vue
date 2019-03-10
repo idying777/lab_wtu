@@ -14,8 +14,8 @@
 </template>
 
 <script>
-  import { SET_POSTS } from '../store-types'
-  import { parsePostUrl } from '../util'
+  import { SET_POSTS } from '../../store-types'
+  import { parsePostUrl } from '../../util'
   import { mapState } from 'vuex'
 
   export default {

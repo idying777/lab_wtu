@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import HomeIndex from './views/home/HomeIndex'
+import HomeView from './views/home/HomeView'
 
 Vue.use(Router)
 
@@ -8,13 +9,26 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
-    },
-
-    {
-      path: '/home',
-      redirect: '/'
+      component: HomeIndex,
+      children: [
+        {
+          path: '/',
+          component: HomeView
+        },
+        {
+          path: '/category/:category',
+          component: () => import('./views/home/Category')
+        },
+        {
+          path: '/files',
+          component: () => import('./views/home/Files')
+        },
+        {
+          path: '/post/:title',
+          name: 'PostView',
+          component: () => import('./views/home/PostView')
+        }
+      ]
     },
 
     {
@@ -24,27 +38,9 @@ export default new Router({
     },
 
     {
-      path: '/files',
-      name: 'files',
-      component: () => import('./views/Files')
-    },
-
-    {
-      path: '/category/:category',
-      name: 'tab',
-      component: () => import('./views/CategoryView')
-    },
-
-    {
       path: '/category/:category/new',
       name: 'PostNew',
       component: () => import('./views/PostNew')
-    },
-
-    {
-      path: '/post/:title',
-      name: 'PostView',
-      component: () => import('./views/PostView')
     },
 
     {

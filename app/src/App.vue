@@ -1,22 +1,12 @@
 <template>
   <div class="main-container">
-    <header>
-      <nav-main/>
-    </header>
-    <main>
-      <router-view/>
-    </main>
-    <footer>
-      <footer-main/>
-    </footer>
+    <router-view></router-view>
   </div>
 </template>
 
 
 <script>
   import { FETCH_DATA } from './store-types'
-  import NavMain from './views/NavMain'
-  import FooterMain from './views/FooterMain'
 
   export default {
     data() {
@@ -25,22 +15,12 @@
       }
     },
     name: 'app',
-    components: {
-      NavMain,
-      FooterMain
-    },
+    components: {},
     async created() {
-      this.routeUpdate()
       await this.$store.dispatch(FETCH_DATA)
     },
-    watch: {
-      '$route': 'routeUpdate'
-    },
-    methods: {
-      routeUpdate() {
-        this.is_display = !this.$route.path.startsWith('/admin')
-      }
-    }
+    watch: {},
+    methods: {}
   }
 </script>
 
@@ -50,7 +30,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
 
   header {
     height: 61px;
