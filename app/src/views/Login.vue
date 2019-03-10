@@ -46,9 +46,6 @@
         this.logging = true
         this.$api.post('/admin/login', this.form).then(() => {
           this.$store.commit(SET_LOGGED_IN, true)
-          if (this.remember) {
-            localStorage.setItem('logged_in', this.form.username)
-          }
           this.$router.push('/')
         }).catch(() => {
           this.$message('Password Error')

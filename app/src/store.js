@@ -17,8 +17,10 @@ export default new Vuex.Store({
     },
     [SET_LOGGED_IN](state, is) {
       state.logged_in = is
-      if (!is) {
-        localStorage.removeItem('logged_in')
+      if (is) {
+        localStorage.setItem(SET_LOGGED_IN, 'true')
+      } else {
+        localStorage.removeItem(SET_LOGGED_IN)
       }
     },
     [SET_FILES](state, files) {
@@ -34,8 +36,8 @@ export default new Vuex.Store({
       const files = await api.get('files')
       commit(SET_FILES, files.data)
 
-      const logged_username = localStorage.getItem('logged_in')
-      if (logged_username) {
+      const logged = localStorage.getItem(SET_LOGGED_IN)
+      if (logged) {
         commit(SET_LOGGED_IN, true)
       }
     }

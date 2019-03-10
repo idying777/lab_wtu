@@ -1,14 +1,6 @@
 <!--suppress ES6CheckImport -->
 <template>
   <el-form label-width="80px" label-position="left">
-    <el-form-item label="上传附件">
-      <el-upload :action="fileUrl" multiple
-                 :file-list="post.fileList"
-                 :on-success="handleSuccess"
-                 accept="*">
-        <el-button>上传</el-button>
-      </el-upload>
-    </el-form-item>
     <el-form-item>
       <el-button v-on:click="handleSave">保存</el-button>
     </el-form-item>
@@ -64,10 +56,6 @@
       handleSave() {
         this.onSave(this.post)
       },
-      handleSuccess(r, file, fileList) {
-        console.log(fileList, file)
-        this.post.fileList = fileList
-      }
     }
 
   }

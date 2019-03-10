@@ -1,13 +1,16 @@
 <template>
   <div>
     <ul>
-      <li :key="post.key" v-for="post of posts">
-        <span>{{post.title}}</span>
-        <span :class="{mr:logged_in}" style="float: right">{{post.createdAt.slice(0,10)}}</span>
-        <div v-if="logged_in" style="position: relative;right: 0">
+      <li style="display: flex"
+          :key="post.key" v-for="post of posts">
+        <a :href="'/#/post/'+post.title" style="flex-grow: 3;margin-right: 100px;line-height: 40px">
+          <span>{{post.title}}</span>
+          <span style="float: right;">{{post.createdAt.slice(0,10)}}</span>
+        </a>
+        <el-button-group v-if="logged_in" style="flex-grow: 1">
           <el-button @click="handleEdit(post)">编辑</el-button>
           <el-button @click="handleDelete(post)">删除</el-button>
-        </div>
+        </el-button-group>
       </li>
     </ul>
   </div>
