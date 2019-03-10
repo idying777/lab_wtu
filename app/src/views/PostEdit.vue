@@ -23,13 +23,15 @@
 
     methods: {
       handleSave(post) {
-        // if (post.fileList.length > 0)
-        //   post.fileList = post.fileList.map(f => f.name)
         this.$api.patch(parsePostUrl(post), post).then(r => {
           this.$store.commit(SET_POSTS, this.$store.state.posts.filter(p => parsePostUrl(p) !== parsePostUrl(post)))
           this.addPost(r.data)
           this.$router.push(`/category/${post.category}`)
-          this.$message('save success')
+          this.$message({
+            message: 'save success',
+            type: 'success',
+            duration: 1500
+          })
         }).catch(e => {
           this.addPost(post)
           this.$message('save failed', e)

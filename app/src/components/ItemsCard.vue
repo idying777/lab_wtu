@@ -4,10 +4,11 @@
       <span>{{category_info[category]}}</span>
     </div>
     <div class="card-body">
-      <el-row tag="a" type="flex" justify="space-between"
+      <el-row tag="a" style="margin: 5px 0" type="flex" justify="space-between"
               :href="'/#/post/'+post.title"
+              v-for="post of posts.slice(0,8)"
               v-bind:key="post.title"
-              v-for="post of posts.slice(0,8)">
+      >
         <span>{{post.title.slice(0,16)}}</span>
         <span class="hidden-md-and-down" style="text-align: right">
             {{post.createdAt.slice(0,10)}}
@@ -43,12 +44,6 @@
 <style scoped lang="scss">
   .box {
     height: 300px;
-  }
-
-  a {
-    span {
-
-    }
   }
 
   .card-body {

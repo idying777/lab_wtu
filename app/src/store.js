@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { FETCH_DATA, SET_FILES, SET_LOGGED_IN, SET_POSTS } from './store-types'
+import {
+  FETCH_DATA,
+  SET_FILES,
+  SET_LOADING,
+  SET_LOGGED_IN,
+  SET_POSTS
+} from './store-types'
 import { api } from './main'
 
 Vue.use(Vuex)
@@ -9,7 +15,8 @@ export default new Vuex.Store({
   state: {
     posts: [],
     files: [],
-    logged_in: false
+    logged_in: false,
+    loading: true
   },
   mutations: {
     [SET_POSTS](state, posts) {
@@ -25,6 +32,9 @@ export default new Vuex.Store({
     },
     [SET_FILES](state, files) {
       state.files = files
+    },
+    [SET_LOADING](state, b) {
+      state.loading = b
     }
   },
 
@@ -40,6 +50,7 @@ export default new Vuex.Store({
       if (logged) {
         commit(SET_LOGGED_IN, true)
       }
+      commit(SET_LOADING, false)
     }
   },
 

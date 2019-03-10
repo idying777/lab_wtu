@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <ul>
+  <el-card class="container wrapper">
+    <ul v-if="posts.length>0">
       <li style="display: flex"
           :key="post.key" v-for="post of posts">
         <a :href="'/#/post/'+post.title" style="flex-grow: 3;margin-right: 100px;line-height: 40px">
@@ -13,7 +13,8 @@
         </el-button-group>
       </li>
     </ul>
-  </div>
+    <div v-else>empty</div>
+  </el-card>
 </template>
 
 <script>
@@ -47,5 +48,16 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  .wrapper {
+    height: 360px;
+    margin: 0 80px;
+
+    ul {
+      li {
+        border: black 1px;
+      }
+
+    }
+  }
 </style>

@@ -9,9 +9,9 @@
 
         <el-submenu index="2">
           <template slot="title">机构职能</template>
-          <el-menu-item index="2-1">选项1</el-menu-item>
-          <el-menu-item index="2-2">选项2</el-menu-item>
-          <el-menu-item index="2-3">选项3</el-menu-item>
+          <el-menu-item index="/category/job-core">学术骨干</el-menu-item>
+          <el-menu-item index="/category/job-fix">固定研究人员</el-menu-item>
+          <el-menu-item index="/category/job-flow">流动研究人员</el-menu-item>
         </el-submenu>
 
         <el-menu-item index="/category/team">研究团队</el-menu-item>
@@ -40,20 +40,22 @@
       </div>
     </main>
     <footer>
-      <div class="plist">
-        <div class="plist-title">
-          <h3>友情链接：</h3>
+      <div class="container">
+        <div class="plist">
+          <div class="plist-title">
+            <h3>友情链接：</h3>
+          </div>
+          <div class="link">
+            <a href="http://www.moe.gov.cn/">教育部 </a>
+            <a href="http://www.dhu.edu.cn/">东华大学 </a>
+            <a href="http://www.tjpu.edu.cn">天津工业大学 </a>
+            <a href="http://www.zstu.edu.cn/">浙江理工大学 </a>
+            <a href="http://www.suda.edu.cn/">苏州大学 </a>
+            <a href="http://www.jiangnan.edu.cn/">江南大学 </a>
+          </div>
         </div>
-        <div class="link">
-          <a href="http://www.moe.gov.cn/">教育部 </a>
-          <a href="http://www.dhu.edu.cn/">东华大学 </a>
-          <a href="http://www.tjpu.edu.cn">天津工业大学 </a>
-          <a href="http://www.zstu.edu.cn/">浙江理工大学 </a>
-          <a href="http://www.suda.edu.cn/">苏州大学 </a>
-          <a href="http://www.jiangnan.edu.cn/">江南大学 </a>
-        </div>
+        <div class="copyright">联系我们:027-59367574 地址:武汉市江夏区阳光一号 邮编：430200<br/>Copyright©版权所有：数计重点实验室</div>
       </div>
-      <div class="copyright">联系我们:027-59367574 地址:武汉市江夏区阳光一号 邮编：430200<br/>Copyright©版权所有：数计重点实验室</div>
     </footer>
   </div>
 </template>
@@ -85,6 +87,9 @@
 </script>
 
 <style scoped lang="scss">
+  @import "../../style/layout";
+
+
   .card {
     min-width: 270px;
     max-width: 360px;
@@ -99,6 +104,8 @@
     color: #fff;
     padding: 10px 0;
     font-size: 12px;
+    max-width: 1920px;
+    min-width: $min_width;
 
     .plist {
       margin: 0 30px;

@@ -19,6 +19,7 @@ interface StorageService {
     fun loadAll(): Stream<Path>
     fun load(filename: String): Path
     fun loadAsResource(filename: String): Resource
+    fun delete(filename: String)
     fun deleteAll()
 }
 
@@ -73,6 +74,15 @@ class FSStorageService : StorageService {
             throw RuntimeException("Could not read file: $filename", e)
         }
 
+    }
+
+    override fun delete(filename: String) {
+        val path = root.resolve(filename)
+        if (Files.exists(path)) {
+            Files.delete(path)
+        } else {
+            throw RuntimeException("delete failed. $filename is not exist")
+        }
     }
 
     override fun deleteAll() {

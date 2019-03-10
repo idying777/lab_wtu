@@ -3,7 +3,6 @@ package billow.`fun`.cms.server.ctrl
 import billow.`fun`.cms.server.model.File
 import billow.`fun`.cms.server.service.StorageService
 import org.springframework.core.io.Resource
-import org.springframework.http.HttpMethod
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -34,8 +33,14 @@ class FileCtrl(
                 })
     }
 
-    @GetMapping("/files/search")
-    fun getFile(@RequestParam("filename") filename: String): ResponseEntity<Resource> {
+    @DeleteMapping("/files/{filename}")
+    fun deleteFile(@PathVariable filename: String): ResponseEntity<Any> {
+        storageService.delete(filename)
+        return ResponseEntity.ok("deleted")
+    }
+
+    @GetMapping("/files/{filename}")
+    fun getFile(@PathVariable filename: String): ResponseEntity<Resource> {
         return ResponseEntity.ok().contentType(MediaType.APPLICATION_OCTET_STREAM)
                 .header("Content-Disposition", "attachment; filename=$filename")
                 .body(storageService.loadAsResource(filename))

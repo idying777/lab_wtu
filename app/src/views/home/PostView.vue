@@ -37,8 +37,7 @@
     margin: 80px auto;
 
     .post-content {
-      width: 70%;
-      margin: 0 auto;
+      margin: 0;
     }
   }
 </style>

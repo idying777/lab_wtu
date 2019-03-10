@@ -32,7 +32,12 @@
         }
         this.$api.post('posts', post).then(r => {
           this.$store.commit(SET_POSTS, this.$store.state.posts.concat(r.data))
-          this.$message('post save successful')
+          this.$message({
+            message: 'save success',
+            type: 'success',
+            duration: 1500
+          })
+          this.$router.push(`/category/${post.category}`)
         }).catch((err) => {
           this.$message('save failed', err)
         })

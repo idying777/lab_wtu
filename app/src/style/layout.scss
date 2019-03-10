@@ -1,7 +1,7 @@
-$min_width: 825px;
+$min_width: 930px;
 .container {
   max-width: 1095px;
-  min-width: 825px;
+  min-width: $min_width;
   margin: 0 auto;
 }
 
