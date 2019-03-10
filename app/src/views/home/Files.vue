@@ -17,7 +17,9 @@
           <i class="el-icon-download"></i>
           <span>{{file.filename}}</span> </a>
 
-        <el-button style="float: right" @click="handleDelete(file)">删除</el-button>
+        <template v-if="logged_in">
+          <el-button style="float: right" @click="handleDelete(file)">删除</el-button>
+        </template>
       </li>
     </ul>
   </el-card>

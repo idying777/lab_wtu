@@ -44,11 +44,15 @@
     methods: {
       submit() {
         this.logging = true
-        this.$api.post('/admin/login', this.form).then(() => {
-          this.$store.commit(SET_LOGGED_IN, true)
-          this.$router.push('/')
+        this.$api.post('/admin/login', this.form).then((r) => {
+          if (r.status === 200) {
+            this.$store.commit(SET_LOGGED_IN, true)
+            this.$router.push('/')
+          } else {
+            this.$message('password error')
+          }
         }).catch(() => {
-          this.$message('Password Error')
+          this.$message('user is not exist')
         }).finally(() => {
           this.logging = false
         })

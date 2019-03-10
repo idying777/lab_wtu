@@ -7,6 +7,8 @@
     <bytecodeTargetLevel target="11">
       <module name="billow.fun.cms.server.main" target="1.8" />
       <module name="billow.fun.cms.server.test" target="1.8" />
+      <module name="billow.fun.serve4j.main" target="11" />
+      <module name="billow.fun.serve4j.test" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
