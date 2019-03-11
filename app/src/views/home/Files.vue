@@ -55,7 +55,7 @@
         })
       },
       getFileUrl(file) {
-        return `http://localhost:8081/api/files/${file.name}`
+        return `${process.env.VUE_APP_API_URL}/files/${file.name}`
       }
     }
   }

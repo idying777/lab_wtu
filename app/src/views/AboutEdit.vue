@@ -45,13 +45,14 @@
             }
           ).catch(() => this.$message('save failed'))
         } else {
-          this.$api.post('/posts', this.about).then(() => {
+          this.$api.post('/posts', this.about).then((r) => {
               this.$message({
                 message: 'save success',
                 type: 'success',
                 duration: 1000
               })
-              this.$store.commit(SET_POSTS, this.posts.filter(p => p.title !== 'about').push(this.post))
+              let _posts = this.posts.filter(p => p.title !== 'about').concat(r.data)
+              this.$store.commit(SET_POSTS, _posts)
               this.$router.push('/')
             }
           ).catch(() => this.$message('save failed'))

@@ -1,12 +1,12 @@
 version: "3"
 services:
-  web:
-    build: app
-    restart: always
-    ports:
-      - "80:80"
-    depends_on:
-      - api
+#  web:
+#    build: app
+#    restart: always
+#    ports:
+#      - "80:80"
+#    depends_on:
+#      - api
   api:
     build: serve4j
     restart: always
@@ -14,6 +14,8 @@ services:
       - "8081:8081"
     environment:
       DATA_BASE_HOST: database
+    volumes:
+      - ./upload:/upload-dir
     depends_on:
       - database
   database:

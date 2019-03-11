@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 
 @Entity
 public class Post extends BaseEntity {
+    @Column(unique = true)
     private String title;
     @Column(columnDefinition = "LONGTEXT")
     private String content;

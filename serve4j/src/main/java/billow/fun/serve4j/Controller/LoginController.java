@@ -21,9 +21,10 @@ public class LoginController {
 
     @PostMapping(value = "/api/admin/login")
     public ResponseEntity<String> login(@RequestBody User user) {
-        User u = userRepo.findByUsername(user.getUsername());
-        if (u != null) {
-            if (u.getPassword().equals(user.getPassword())) {
+        var r = userRepo.findByUsername(user.getUsername());
+        if (r.isPresent()) {
+            var found = r.get();
+            if (found.getPassword().equals(user.getPassword())) {
                 return ResponseEntity.ok("login success");
             } else {
                 return ResponseEntity.status(226).body("password error");

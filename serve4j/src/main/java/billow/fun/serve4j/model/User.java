@@ -2,10 +2,12 @@ package billow.fun.serve4j.model;
 
 import billow.fun.serve4j.BaseEntity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
 public class User extends BaseEntity {
+    @Column(unique = true)
     private String username;
     private String password;
 

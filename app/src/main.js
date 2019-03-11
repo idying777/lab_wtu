@@ -12,7 +12,7 @@ Vue.config.productionTip = false
 
 export const api = axios.create(
   {
-    baseURL: 'http://localhost:8081/api',
+    baseURL: process.env.VUE_APP_API_URL,
     headers: {
       'Content-Type': 'application/json'
     }
@@ -23,7 +23,7 @@ Vue.use({
     Vue.prototype.$api = api
   }
 })
-
+//
 new Vue({
   router,
   store,
