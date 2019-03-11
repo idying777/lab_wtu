@@ -1,24 +1,22 @@
 <template>
-  <div>
+  <div v-loading="loading">
     <div class="row">
       <div class="card">
         <el-card style="height: 300px"
                  :v-loading="loading"
                  v-on:click="handleClick()">
-          <h3 slot="header">关于我们
+          <span slot="header">关于我们
             <el-button v-if="logged_in"
                        @click="handleEditAbout()">编辑
             </el-button>
-          </h3>
-          <div v-if="loading">loading</div>
-          <div v-else v-html="aboutContent"></div>
+          </span>
+          <div v-if="!loading&&about" v-html="aboutContent"></div>
         </el-card>
       </div>
       <div class="card">
         <el-card style="height: 300px">
-          <h3 slot="header"> 热点新闻</h3>
-          <div v-if="loading">loading</div>
-          <div v-else>
+          <span slot="header"> 热点新闻</span>
+          <div v-if="hotPosts&&!loading">
             <el-row tag="a" style="margin: 5px 0" type="flex" justify="space-between"
                     v-for="post of hotPosts.slice(0,8)"
                     :href="'/#/post/'+post.title"
@@ -63,7 +61,7 @@
       ...mapGetters(['getPostsByCategory']),
       ...mapState(['loading', 'posts', 'logged_in']),
       about() {
-        return this.getPostsByCategory('about')[0]
+        return this.posts.find(p => p.title === 'about')
       },
       aboutContent() {
         return markdown.toHTML(this.about.content)
@@ -74,10 +72,10 @@
     },
     methods: {
       handleClick() {
-        this.router.push('/post/about')
+        this.$router.push('/post/about')
       },
       handleEditAbout() {
-        this.$router.push('/post/about/edit')
+        this.$router.push('/about/edit')
       }
     }
   }

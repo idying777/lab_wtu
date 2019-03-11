@@ -5,7 +5,7 @@
       <el-button v-on:click="handleSave">保存</el-button>
     </el-form-item>
     <el-form-item label="标题">
-      <el-input v-model="post.title"/>
+      <el-input v-model="post.title" :disabled="post.title==='about'"/>
     </el-form-item>
     <el-form-item>
       <editor v-model="post.content"
@@ -55,7 +55,7 @@
     methods: {
       handleSave() {
         this.onSave(this.post)
-      },
+      }
     }
 
   }

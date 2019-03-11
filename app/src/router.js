@@ -47,6 +47,11 @@ export default new Router({
       path: '/post/:title/edit',
       name: 'PostEdit',
       component: () => import('./views/PostEdit')
+    },
+    {
+      path: '/about/edit',
+      name: 'AboutEdit',
+      component: () => import('./views/AboutEdit')
     }
   ]
 })

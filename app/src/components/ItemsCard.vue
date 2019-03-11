@@ -1,12 +1,12 @@
 <template>
-  <el-card class="box">
+  <el-card class="card">
     <div slot="header">
       <span>{{category_info[category]}}</span>
     </div>
-    <div class="card-body">
+    <div>
       <el-row tag="a" style="margin: 5px 0" type="flex" justify="space-between"
               :href="'/#/post/'+post.title"
-              v-for="post of posts.slice(0,8)"
+              v-for="post of itemss.slice(0,8)"
               v-bind:key="post.title"
       >
         <span>{{post.title.slice(0,16)}}</span>
@@ -19,6 +19,8 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
+
   export default {
     name: 'ItemsCard',
     props: ['category'],
@@ -34,19 +36,14 @@
       }
     },
     computed: {
-      posts() {
-        return this.$store.getters.getPostsByCategory(this.category)
+      ...mapState(['posts']),
+      itemss() {
+        if (this.posts) return this.$store.getters.getPostsByCategory(this.category)
+        else return undefined
       }
     }
   }
 </script>
 
 <style scoped lang="scss">
-  .box {
-    height: 300px;
-  }
-
-  .card-body {
-    font-size: 13px;
-  }
 </style>

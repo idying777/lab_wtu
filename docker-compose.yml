@@ -13,10 +13,10 @@ services:
     ports:
       - "8081:8081"
     environment:
-      DATA_BASE_HOST: db
+      DATA_BASE_HOST: database
     depends_on:
-      - db
-  db:
+      - database
+  database:
     build: db
     restart: always
     ports:
