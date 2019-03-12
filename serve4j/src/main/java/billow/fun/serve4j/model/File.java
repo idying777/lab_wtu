@@ -4,23 +4,23 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class File {
-    private String username;
+    private String filename;
     private String url;
 
     public File() {
     }
 
-    public File(String username, String url) {
-        this.username = username;
+    public File(String filename, String url) {
+        this.filename = filename;
         this.url = url;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFilename() {
+        return filename;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
 
     public String getUrl() {

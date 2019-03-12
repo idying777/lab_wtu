@@ -2,7 +2,7 @@
   <el-card>
     <div slot="header"
          v-if="logged_in">
-      <el-upload action="http://localhost:8081/api/admin/files" multiple
+      <el-upload :action="uploadUrl" multiple
                  :file-list="fileList"
                  :show-file-list="false"
                  :on-success="handleSuccess"
@@ -33,6 +33,7 @@
     name: 'Files',
     data() {
       return {
+        uploadUrl: process.env.VUE_APP_API_URL + '/admin/files',
         fileList: []
       }
     },

@@ -48,7 +48,7 @@ public final class FileController {
     @GetMapping({"/files/{filename}"})
     public final ResponseEntity getFile(@PathVariable String filename) {
         return ResponseEntity.ok().contentType(MediaType.APPLICATION_OCTET_STREAM)
-                .header("Content-Disposition", "attachment; filename=$filename")
+                .header("Content-Disposition", "attachment; filename=" + filename)
                 .body(storageService.loadAsResource(filename));
     }
 }

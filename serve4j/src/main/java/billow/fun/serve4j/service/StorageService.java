@@ -3,12 +3,14 @@ package billow.fun.serve4j.service;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.stream.Stream;
 
 @Service
@@ -29,7 +31,14 @@ public class StorageService implements IStorageService {
 
     @Override
     public void store(MultipartFile file) {
-
+        var filename = StringUtils.cleanPath(file.getOriginalFilename());
+        if (file.isEmpty() || filename.contains("..")) throw new RuntimeException("failed store file" + file.getName());
+        try {
+            var inputStream = file.getInputStream();
+            Files.copy(inputStream, root.resolve(filename), StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            throw new RuntimeException("failed store file" + file.getName());
+        }
     }
 
     @Override

@@ -4,7 +4,7 @@
              class="login-container">
       <h3 class="title">系统登录</h3>
       <el-form-item>
-        <el-input type="text" v-model="form.username" auto-complete="on" placeholder="账号"></el-input>
+        <el-input type="text" v-model="form.filename" auto-complete="on" placeholder="账号"></el-input>
       </el-form-item>
       <el-form-item>
         <el-input type="password" v-model="form.password" auto-complete="off" placeholder="密码"></el-input>
@@ -28,11 +28,11 @@
         logging: false,
         remember: false,
         form: {
-          username: 'admin',
+          filename: 'admin',
           password: ''
         },
         rules: {
-          username: [
+          filename: [
             {required: true, message: '请输入账号', trigger: 'blur'}
           ],
           password: [
