@@ -30,9 +30,4 @@
     padding: 0;
     box-sizing: border-box;
   }
-
-
-  header {
-    height: 61px;
-  }
 </style>

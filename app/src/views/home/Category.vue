@@ -51,7 +51,6 @@
 <style scoped lang="scss">
   .wrapper {
     height: 360px;
-    margin: 0 80px;
 
     ul {
       li {

@@ -3,10 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/billow.fun.serve4j.iml" filepath="$PROJECT_DIR$/.idea/modules/billow.fun.serve4j.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/billow.fun.serve4j.main.iml" filepath="$PROJECT_DIR$/.idea/modules/billow.fun.serve4j.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/billow.fun.serve4j.test.iml" filepath="$PROJECT_DIR$/.idea/modules/billow.fun.serve4j.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server.iml" filepath="$PROJECT_DIR$/.idea/modules/server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/serve4j.iml" filepath="$PROJECT_DIR$/.idea/modules/serve4j.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/vue-cms.iml" filepath="$PROJECT_DIR$/.idea/vue-cms.iml" />
     </modules>
   </component>
