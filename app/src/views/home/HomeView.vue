@@ -33,7 +33,7 @@
         <items-card category="notify"/>
       </div>
     </div>
-    <div class="row">
+    <div style="padding-bottom: 10px" class="row">
       <div class="card">
         <items-card category="instrument"/>
       </div>
