@@ -50,7 +50,7 @@
 
 <style scoped lang="scss">
   .wrapper {
-    height: 360px;
+    min-height: 360px;
 
     ul {
       li {

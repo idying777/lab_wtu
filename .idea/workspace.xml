@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca6486a3-5503-4fba-ac2d-6d2ca1d3b798" name="Default Changelist" comment="fix upload">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="ca6486a3-5503-4fba-ac2d-6d2ca1d3b798" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/style/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/style/layout.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/views/home/Category.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/views/home/Category.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/views/home/HomeIndex.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/views/home/HomeIndex.vue" afterDir="false" />
     </list>
@@ -96,42 +92,12 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/components/ItemsCard.vue">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/views/home/HomeIndex.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#el-row#0;n#div#1;n#el-card#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/components/PostForm.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-432">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/style/layout.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/style/reset.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="108">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -139,32 +105,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/views/home/HomeView.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="91" column="16" lean-forward="true" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
+            <state relative-caret-position="306">
+              <caret line="32" column="36" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="36" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#template#0;n#!!top" />
                 <element signature="n#style#0;n#el-card#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#el-card#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#0;n#template#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/views/home/PostView.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-234" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/views/home/Category.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#span#1;n#a#0;n#li#0;n#ul#0;n#el-card#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -249,9 +195,9 @@
         <option value="$PROJECT_DIR$/app/src/views/Login.vue" />
         <option value="$PROJECT_DIR$/app/.env" />
         <option value="$PROJECT_DIR$/app/src/App.vue" />
-        <option value="$PROJECT_DIR$/app/src/views/home/HomeIndex.vue" />
         <option value="$PROJECT_DIR$/app/src/style/layout.scss" />
         <option value="$PROJECT_DIR$/app/src/views/home/Category.vue" />
+        <option value="$PROJECT_DIR$/app/src/views/home/HomeIndex.vue" />
       </list>
     </option>
   </component>
@@ -558,7 +504,8 @@
       <workItem from="1552552118059" duration="1080000" />
       <workItem from="1552553680940" duration="1363000" />
       <workItem from="1552557933445" duration="1371000" />
-      <workItem from="1552562382797" duration="4174000" />
+      <workItem from="1552562382797" duration="4561000" />
+      <workItem from="1552567819170" duration="400000" />
     </task>
     <task id="LOCAL-00001" summary="+docker">
       <created>1552034994885</created>
@@ -777,17 +724,24 @@
       <option name="project" value="LOCAL" />
       <updated>1552380373201</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="what's the ffff">
+      <created>1552567026778</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1552567026778</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112198000" />
+    <option name="totallyTimeSpent" value="112985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25292864" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1485623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -796,7 +750,7 @@
       <window_info anchor="bottom" id="Messages" order="1" sideWeight="0.49840087" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3275488" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4989339" weight="0.32771337" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4989339" visible="true" weight="0.32771337" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -805,10 +759,10 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32771337" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49597856" visible="true" weight="0.26765016" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49520767" weight="0.21812434" />
       <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49731904" weight="0.3146998" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" weight="0.329718" />
-      <window_info anchor="bottom" id="Event Log" order="16" sideWeight="0.50402147" side_tool="true" weight="0.4399586" />
+      <window_info anchor="bottom" id="Event Log" order="16" sideWeight="0.50479233" side_tool="true" weight="0.26765016" />
       <window_info anchor="bottom" id="TypeScript" order="17" />
       <window_info anchor="bottom" id="Database Console" order="18" weight="0.3286119" />
       <window_info anchor="right" id="Remote Host" order="0" weight="0.3297587" />
@@ -856,10 +810,23 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="travis+" />
     <MESSAGE value="travis:typo" />
     <MESSAGE value="travis:careless" />
     <MESSAGE value="travis:gradle version not match" />
@@ -884,7 +851,8 @@
     <MESSAGE value="ok:?" />
     <MESSAGE value="mount upload, unique column" />
     <MESSAGE value="fix upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix upload" />
+    <MESSAGE value="what's the ffff" />
+    <option name="LAST_COMMIT_MESSAGE" value="what's the ffff" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/serve4j/src/main/java/billow/fun/serve4j/model/Post.kt" />
@@ -1149,13 +1117,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/assets/index.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/views/home/HomeIndex.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -1194,31 +1155,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/views/home/HomeView.vue">
+    <entry file="file://$PROJECT_DIR$/app/src/views/home/Category.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="91" column="16" lean-forward="true" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
+        <state relative-caret-position="378">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#style#0;n#el-card#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-card#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#style#0;n#span#1;n#a#0;n#li#0;n#ul#0;n#el-card#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/views/home/PostView.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/views/home/HomeView.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234" />
+        <state relative-caret-position="306">
+          <caret line="32" column="36" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#el-card#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-card#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/views/home/Category.vue">
+    <entry file="file://$PROJECT_DIR$/app/src/views/home/HomeIndex.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#a#0;n#li#0;n#ul#0;n#el-card#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="108">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>

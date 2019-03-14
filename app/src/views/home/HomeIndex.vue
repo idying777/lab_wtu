@@ -1,5 +1,7 @@
 <template>
   <div class="home">
+    <div class="logo"><img src="../../assets/logo.png"></div>
+
     <header>
       <div class="container">
         <el-menu class="menu" default-active="1" mode="horizontal" :router="true"
@@ -20,6 +22,7 @@
           <el-menu-item index="/category/result">科研成果</el-menu-item>
           <el-menu-item index="/category/instrument">仪器设备</el-menu-item>
           <el-menu-item index="/category/exchange">开发交流</el-menu-item>
+          <el-menu-item index="/category/notify">通知公告</el-menu-item>
           <el-menu-item index="/files">下载专区</el-menu-item>
           <el-menu-item><a href="https://www.wtu.edu.cn">学校首页</a></el-menu-item>
         </el-menu>
@@ -101,6 +104,14 @@
   .card {
     min-width: 270px;
     max-width: 360px;
+  }
+
+  .logo {
+    float: left;
+    display: block;
+    padding: 0 40px;
+    width: 10px;
+    height: 10px;
   }
 
   footer {
