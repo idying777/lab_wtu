@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca6486a3-5503-4fba-ac2d-6d2ca1d3b798" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/views/home/Category.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/views/home/Category.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/views/home/HomeIndex.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/views/home/HomeIndex.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/server/.gradle/" />
@@ -92,12 +91,18 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/views/home/HomeIndex.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="522">
+              <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#header#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#footer#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#script#0;n#!!top" />
+                <element signature="e#3405#4132#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/views/home/HomeView.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="576">
               <caret line="32" column="36" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#el-card#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -221,7 +226,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -280,6 +284,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -505,7 +510,8 @@
       <workItem from="1552553680940" duration="1363000" />
       <workItem from="1552557933445" duration="1371000" />
       <workItem from="1552562382797" duration="4561000" />
-      <workItem from="1552567819170" duration="400000" />
+      <workItem from="1552567819170" duration="438000" />
+      <workItem from="1552635746530" duration="907000" />
     </task>
     <task id="LOCAL-00001" summary="+docker">
       <created>1552034994885</created>
@@ -731,17 +737,24 @@
       <option name="project" value="LOCAL" />
       <updated>1552567026778</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="差不多">
+      <created>1552568248675</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1552568248675</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112985000" />
+    <option name="totallyTimeSpent" value="113930000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="1920" y="-1" width="1920" height="1082" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1485623" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14978679" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -750,7 +763,7 @@
       <window_info anchor="bottom" id="Messages" order="1" sideWeight="0.49840087" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3275488" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4989339" visible="true" weight="0.32771337" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4989339" visible="true" weight="0.32712215" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -827,7 +840,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="travis:typo" />
     <MESSAGE value="travis:careless" />
     <MESSAGE value="travis:gradle version not match" />
     <MESSAGE value="travis: export" />
@@ -852,7 +864,8 @@
     <MESSAGE value="mount upload, unique column" />
     <MESSAGE value="fix upload" />
     <MESSAGE value="what's the ffff" />
-    <option name="LAST_COMMIT_MESSAGE" value="what's the ffff" />
+    <MESSAGE value="差不多" />
+    <option name="LAST_COMMIT_MESSAGE" value="差不多" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/serve4j/src/main/java/billow/fun/serve4j/model/Post.kt" />
@@ -1168,22 +1181,28 @@
     <entry file="file://$PROJECT_DIR$/app/src/views/home/PostView.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/views/home/HomeIndex.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#header#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#footer#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#script#0;n#!!top" />
+            <element signature="e#3405#4132#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/views/home/HomeView.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="576">
           <caret line="32" column="36" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#el-card#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#el-card#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/views/home/HomeIndex.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>

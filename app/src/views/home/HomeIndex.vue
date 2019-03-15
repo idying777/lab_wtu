@@ -1,13 +1,14 @@
 <template>
   <div class="home">
-    <div class="logo"><img src="../../assets/logo.png"></div>
-
-    <header>
-      <div class="container">
-        <el-menu class="menu" default-active="1" mode="horizontal" :router="true"
+    <header class="container">
+      <div style="display: flex">
+        <div class="logo"><img src="../../assets/logo.png" alt="logo"></div>
+        <el-menu class="menu"
                  background-color="#0d295d"
                  text-color="#fff"
-                 active-text-color="#02F8C0">
+                 active-text-color="#02F8C0"
+                 default-active="1" mode="horizontal" :router="true"
+>
           <el-menu-item index="/">首页</el-menu-item>
 
           <el-submenu index="2">
@@ -26,7 +27,8 @@
           <el-menu-item index="/files">下载专区</el-menu-item>
           <el-menu-item><a href="https://www.wtu.edu.cn">学校首页</a></el-menu-item>
         </el-menu>
-
+      </div>
+      <div>
         <el-menu style=""
                  v-if="$store.state.logged_in"
                  mode="horizontal">
@@ -105,15 +107,14 @@
     min-width: 270px;
     max-width: 360px;
   }
-
-  .logo {
-    float: left;
-    display: block;
-    padding: 0 40px;
-    width: 10px;
-    height: 10px;
+  .el-menu-item{
+    padding: 0 10px;
   }
-
+  .logo {
+    display: block;
+    width: 288px;
+    padding: 0 10px;
+  }
   footer {
     background: #0d295d;
     color: #fff;
