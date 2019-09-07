@@ -1,2 +1,2 @@
-call serve4j/gradlew -b serve4j/build.gradle bootJar > NUL
+call back-end/gradlew -b back-end/build.gradle bootJar > NUL
 docker-compose up --build %1

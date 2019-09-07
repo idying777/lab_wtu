@@ -7,3 +7,8 @@
 3. gradle
 
 4. docker(optional)
+
+## Run
+
+### build front-end
+

@@ -1,0 +1,32 @@
+$min_width: 930px;
+$max_width: 1095px;
+@mixin width {
+  max-width: $max_width;
+  min-width: $min_width;
+}
+
+
+.container {
+  @include width;
+  margin: 0 auto;
+}
+
+.banner {
+  @include width;
+  margin: 0 auto;
+
+  overflow: hidden;
+  position: relative;
+  background: center top no-repeat;
+  -webkit-transition: height .6s, background, .6s;
+  transition: height .6s, background, .6s;
+
+  img {
+    width: 100%;
+  }
+}
+
+.card {
+  font-size: 13px;
+  height: 300px;
+}

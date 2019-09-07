@@ -1,14 +1,14 @@
 version: "3"
 services:
-  web:
-    build: app
+  front-end:
+    build: front-end
     restart: always
     ports:
       - "80:80"
     depends_on:
-      - api
-  api:
-    build: serve4j
+      - back-end
+  back-end:
+    build: back-end
     restart: always
     ports:
       - "8090:8090"
@@ -25,7 +25,7 @@ services:
       - "13306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: cms
+      MYSQL_DATABASE: vx01
     volumes:
       - ./data:/var/lib/mysql
     command: --innodb-flush-method=fsync
