@@ -18,7 +18,7 @@
 cd front-end
 npm i
 npm run build
-cp dist ../back-end/src/main/resources/public
+cp -r dist ../back-end/src/main/resources/public
 ```
 
 ### boot back-end

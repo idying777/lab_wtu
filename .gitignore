@@ -1,4 +1,6 @@
-# Created by .ignore support plugin (hsz.mobi)
+public
+#
+ Created by .ignore support plugin (hsz.mobi)
 ### Gradle template
 .gradle
 /build/
@@ -130,3 +132,4 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 
+back-end/src/main/resources/public/dist/7.js
